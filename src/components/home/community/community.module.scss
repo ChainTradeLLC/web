@@ -1,0 +1,47 @@
+.community {
+    width: 100%;
+    background: #0d0d0d;
+    position: relative;
+    padding: 5%;
+    visibility: hidden;
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            color: #f5f5f5;
+        }
+    }
+    .socials {
+        width: 100%;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icons {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            .icon {
+                flex: 0 23%;
+                height: 100px;
+                margin-bottom: 1%;
+                margin-right: 1%;
+                background: #0a0a0a;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                svg {
+                    width: 50%;
+                    height: 50%;
+                    fill: #909090;
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}

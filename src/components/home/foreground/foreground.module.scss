@@ -1,0 +1,104 @@
+.foreground {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background: transparent;
+    padding: 5%;
+    visibility: hidden;
+    .header {
+        width: 30%;
+        h2 {
+            line-height: 120%;
+            opacity: 0.9;
+        }
+    }
+    .lock {
+        width: max-content;
+        height: 60px;
+        background-color: #cc9c00;
+        border: 1px solid #ffc300;
+        position: absolute;
+        bottom: 15%;
+        right: 12%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        border-radius: 12px;
+        opacity: 0;
+        .lock_icon {
+            margin-right: 15px;
+            width: 30px;
+            height: 30px;
+            fill: #2d202a;
+            stroke: #2d202a;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #080808;
+            text-transform: capitalize;
+            opacity: 0.8;
+        }
+    }
+    .private {
+        width: max-content;
+        height: 60px;
+        background-color: #cc9c00;
+        border: 1px solid #ffc300;
+        position: absolute;
+        top: 10%;
+        right: 22%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        border-radius: 12px;
+        opacity: 0;
+        .private_icon {
+            margin-right: 15px;
+            width: 30px;
+            height: 30px;
+            fill: #2d202a;
+            stroke: #2d202a;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #080808;
+            text-transform: capitalize;
+            opacity: 0.8;
+        }
+    }
+    .secure {
+        width: max-content;
+        height: 60px;
+        background-color: #cc9c00;
+        border: 1px solid #ffc300;
+        position: absolute;
+        top: 60%;
+        left: 15%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 20px;
+        border-radius: 12px;
+        opacity: 0;
+        .secure_icon {
+            margin-right: 15px;
+            width: 30px;
+            height: 30px;
+            fill: #2d202a;
+            stroke: #2d202a;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #080808;
+            text-transform: capitalize;
+            opacity: 0.8;
+        }
+    }
+}
+
+.split-word { will-change: transform, opacity; }

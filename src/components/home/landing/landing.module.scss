@@ -1,0 +1,32 @@
+.landing {
+    height: 90vh;
+    width: 100%;
+    .text {
+      visibility: hidden;
+      .primary_text {
+        line-height: 120%;
+    }
+    .secondary_text { 
+    }
+    .landing_btn {
+      background: #ffc300;
+        color: #080808;
+      font-weight: 900;
+      width: 30%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1em;
+      transition: background .2s;
+    &:hover, &:focus {
+        background: #0f0f0f;
+      color: #F5F5F5;
+    }
+    }
+    }
+}
+
+.split-word { 
+  will-change: transform, opacity;
+}

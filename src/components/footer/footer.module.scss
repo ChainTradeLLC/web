@@ -1,0 +1,99 @@
+.footer {
+    width: 100%;
+    background: transparent;
+    position: relative;
+    .f_logo {
+        position: absolute;
+        right: -5%;
+        top: -5%;
+        width: 30%;
+        height: 80%;
+        overflow: hidden;
+        opacity: 0.02;
+        z-index: -100;
+        // &.animate {
+        //     .f1 {
+        //         animation: line_animation_1 3s ease-in-out 1 forwards .25s, fill_animation_1 4s linear 1 forwards 1s;
+        //     }
+        //     .f2 {
+        //         animation: line_animation_2 3s ease-in-out 1 forwards .25s, fill_animation_1 4s linear 1 forwards 1s;
+        //     }
+        // }
+        .f1 {
+            fill: #f5f5f5;
+            stroke: #000000;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        opacity: 1;
+        }
+        .f2 {
+            fill: #f5f5f5;
+            stroke: #000000;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        opacity: 1;
+        }
+    }
+    .logo_footer {
+        width: calc(2556px / 100 * 9);
+    height: calc(515px / 100 * 9);
+    position: relative;
+    opacity: 0.9;
+    @media (max-width: 768px) {
+        width: calc(2556px / 100 * 8);
+        height: calc(515px / 100 * 8);
+    }
+    @media (max-width: 480px) {
+        width: calc(2556px / 100 * 7);
+        height: calc(515px / 100 * 7);
+    }
+    }
+}
+
+@keyframes line_animation_1 {
+    0% {
+        stroke-dashoffset: 1239.320556640625;
+        stroke-dasharray: 1239.320556640625;
+        stroke: none;
+        opacity: 0;
+    }
+    100% {
+        stroke: #000000;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        opacity: 1;
+      }
+  }
+
+  @keyframes fill_animation_1 {
+    0% {
+        fill: none;
+    }
+    100% {
+        fill: #f5f5f5;
+      }
+  }
+
+  @keyframes line_animation_2 {
+    0% {
+        stroke-dashoffset: 1239.3582763671875;
+        stroke-dasharray: 1239.3582763671875;
+        stroke: none;
+        opacity: 0;
+    }
+    100% {
+        stroke: #000000;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        opacity: 1;
+      }
+  }
+  

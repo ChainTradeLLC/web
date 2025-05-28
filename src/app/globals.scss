@@ -1,0 +1,232 @@
+@use './colors.scss' as colors;
+@use "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'NexaSerif';
+    src: url('/fonts/nexaserif_trial-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Mont';
+    src: url('/fonts/mont-heavydemo.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+//   @layer base {
+//     :root {
+//       // Tailwind-specific colors (HSL format)
+//       --background: 0 0% 100%; // White
+//       --foreground: 222.2 84% 4.9%; // Dark gray
+//       --card: 0 0% 100%;
+//       --card-foreground: 222.2 84% 4.9%;
+//       --popover: 0 0% 100%;
+//       --popover-foreground: 222.2 84% 4.9%;
+//       --primary: 340 6% 10%; // Dark red
+//       --primary-foreground: 40 55% 90%; // Light yellow
+//       --secondary: 210 40% 96.1%; // Light blue-gray
+//       --secondary-foreground: 222.2 47.4% 11.2%; // Darker gray
+//       --muted: 210 40% 96.1%;
+//       --muted-foreground: 345 6% 40%; // Muted red
+//       --accent: 210 40% 96.1%;
+//       --accent-foreground: 222.2 47.4% 11.2%;
+//       --destructive: 0 84.2% 60.2%; // Bright red
+//       --destructive-foreground: 210 40% 98%; // Near-white
+//       --border: 214.3 31.8% 91.4%; // Light blue-gray
+//       --input: 214.3 31.8% 91.4%;
+//       --ring: 222.2 84% 4.9%;
+//       --radius: 0.5rem;
+//       --sxipher-text-primary: 358 82% 39%; // Bright red
+  
+//       // Additional colors (RGB format)
+//       --color-black: 0 0 0;
+//       --color-white: 255 255 255;
+//       --color-gray-50: 250 250 250;
+//       --color-gray-100: 244 244 245;
+//       --color-gray-150: 236 236 238;
+//       --color-gray-200: 228 228 231;
+//       --color-gray-250: 220 220 224;
+//       --color-gray-300: 212 212 216;
+//       --color-gray-350: 187 187 193;
+//       --color-gray-400: 161 161 170;
+//       --color-gray-450: 137 137 146;
+//       --color-gray-500: 113 113 122;
+//       --color-gray-550: 98 98 107;
+//       --color-gray-600: 82 82 91;
+//       --color-gray-650: 73 73 81;
+//       --color-gray-700: 63 63 70;
+//       --color-gray-750: 51 51 56;
+//       --color-gray-800: 39 39 42;
+//       --color-gray-850: 32 32 35;
+//       --color-gray-900: 24 24 27;
+//       --color-gray-950: 18 18 21;
+//       --color-overlay: rgb(var(--color-black) / 60%);
+  
+//       // Map SCSS variables to CSS variables
+//       --primary-color: #{colors.$primary-color};
+//       --secondary-color: #{colors.$secondary-color};
+//       --accent-color: #{colors.$accent-color};
+//       --background-color: #{colors.$background-color};
+//       --text-color: #{colors.$text-color};
+//       --success-color: #{colors.$success-color};
+//       --error-color: #{colors.$error-color};
+//       --dark-900: #{colors.$dark-900};
+//       --tertiary-900: #{colors.$tertiary-900};
+  
+//       // Spacing, sizes, shadows, etc.
+//       --space-0: 0;
+//       --space-1: 0.125rem;
+//       --space-2: 0.25rem;
+//       --space-3: 0.375rem;
+//       --space-4: 0.5rem;
+//       --space-5: 0.625rem;
+//       --space-6: 0.75rem;
+//       --space-7: 0.875rem;
+//       --space-8: 1rem;
+//       --space-9: 1.25rem;
+//       --space-10: 1.5rem;
+//       --space-11: 1.75rem;
+//       --space-12: 2rem;
+//       --space-13: 2.25rem;
+//       --space-14: 2.5rem;
+//       --space-15: 3rem;
+//       --space-16: 3.5rem;
+//       --space-17: 4rem;
+//       --space-18: 4.5rem;
+//       --space-19: 5rem;
+//       --space-20: 6rem;
+//       --space-21: 7rem;
+//       --space-22: 8rem;
+//       --space-23: 9rem;
+//       --space-24: 10rem;
+//       --size-2xs: 0.625rem;
+//       --size-xs: 0.75rem;
+//       --size-sm: 0.875rem;
+//       --size: 1rem;
+//       --size-lg: 1.125rem;
+//       --size-xl: 1.25rem;
+//       --size-2xl: 1.5rem;
+//       --size-3xl: 2rem;
+//       --size-4xl: 3rem;
+//       --radius-xs: 0.3rem;
+//       --radius-sm: 0.4rem;
+//       --radius: 0.7rem;
+//       --radius-lg: 0.8rem;
+//       --shadow-xs: 0 1px 4px rgb(var(--color-black) / 5%);
+//       --shadow-sm: 0 2px 8px rgb(var(--color-black) / 5%);
+//       --shadow: 0 3px 10px rgb(var(--color-black) / 5%);
+//       --shadow-lg: 0 4px 20px rgb(var(--color-black) / 5%);
+//       --shadow-xl: 0 5px 30px rgb(var(--color-black) / 5%);
+//       --backdrop-surface: saturate(2) blur(16px);
+//       --transition: 0.15s ease-in-out;
+//       --transition-linear: 0.15s linear;
+//       --header-height: 60px;
+//       --z-above: 1000000;
+//       --z-overlay: 2000000;
+//       --z-badge: 10000000;
+//       --opacity-hover: 0.8;
+//       --opacity-disabled: 0.5;
+  
+//       // Use SCSS variable for background and color
+//       background-color: colors.$background-color;
+//       color: colors.$text-color;
+  
+//       accent-color: var(--accent-color);
+//     }
+// }
+  
+//     // Dark mode
+//     .dark {
+//       --background: 222.2 84% 4.9%; // Dark gray
+//       --foreground: 210 40% 98%; // Near-white
+//       --card: 222.2 84% 4.9%;
+//       --card-foreground: 210 40% 98%;
+//       --popover: 222.2 84% 4.9%;
+//       --popover-foreground: 210 40% 98%;
+//       --primary: 210 40% 98%;
+//       --primary-foreground: 222.2 47.4% 11.2%;
+//       --secondary: 217.2 32.6% 17.5%; // Darker blue-gray
+//       --secondary-foreground: 210 40% 98%;
+//       --muted: 217.2 32.6% 17.5%;
+//       --muted-foreground: 345 6% 40%;
+//       --accent: 217.2 32.6% 17.5%;
+//       --accent-foreground: 210 40% 98%;
+//       --destructive: 0 62.8% 30.6%; // Dark red
+//       --destructive-foreground: 210 40% 98%;
+//       --border: 217.2 32.6% 17.5%;
+//       --input: 217.2 32.6% 17.5%;
+//       --ring: 212.7 26.8% 83.9%;
+  
+//       // Dark mode specific colors (from media query)
+//       --color-red: 248 113 113;
+//       --color-green: 162 230 53;
+//       --color-accent: rgb(var(--color-white));
+//       --color-surface: rgb(var(--color-gray-850));
+//       --color-surface-hover: rgb(var(--color-gray-800));
+//       --color-surface-elevated: rgb(var(--color-gray-950));
+//       --color-border: rgb(var(--color-gray-750));
+//       --color-border-contrasted: rgb(var(--color-gray-650));
+//       --color-border-transparent: rgb(var(--color-white) / 10%);
+//       --color-skeleton: rgb(var(--color-gray-750));
+//       --color-skeleton-shine: rgb(var(--color-gray-850));
+//       --color-text: rgb(var(--color-white));
+//       --color-text-light: rgb(var(--color-gray-300));
+//       --color-text-lighter: rgb(var(--color-gray-400));
+//       --color-text-lightest: rgb(var(--color-gray-500));
+  
+//       // Comment highlights
+//       --comment-highlight-composing: #0079a2;
+//       --comment-highlight-composing-border: #0079a2;
+//       --comment-highlight-complete: #2d414b;
+//       --comment-highlight-complete-border: #00748d;
+//       --comment-highlight-selected: #0079a2;
+//       --comment-highlight-selected-border: #009cd3;
+  
+//       color-scheme: dark;
+//       background-color: colors.$dark-900;
+//       color: colors.$tertiary-900;
+//     }
+
+html,
+body {
+  width: 100%;
+
+  @media (min-width: 760px) and (max-width: 1024px) {
+    max-width: 100%;
+    max-height: max-content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: colors.$background-color;
+  color: colors.$text-color;
+  font-family: 'NexaSerif', serif;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Mont', sans-serif;
+  color: colors.$text-color;
+}
+
+.my-p      { margin: 0 0 .8em 0; }
+.my-h1     { font-size: 1.5rem; font-weight: 600; }
+.my-link   { text-decoration: underline; color: blue; }
+
+.fill-neutral-50 {
+  fill: rgba(255, 195, 0, 0.02) !important;
+}
+
