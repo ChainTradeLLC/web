@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import AuthProvider from '@/app/providers/auth';
+import AuthProvider from '@/src/app/providers/auth';
 
 export const metadata: Metadata = {
   title: 'ChainTrade - Home',

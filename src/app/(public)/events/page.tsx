@@ -5,7 +5,7 @@ import { Card, CardHeader, CardBody, Button } from '@nextui-org/react';
 import Link from 'next/link';
 import styles from './events.module.scss';
 import moment from 'moment';
-import LoadingRipple from '@/components/ui/loading';
+import LoadingRipple from '@/src/components/ui/loading';
 
 export default function Page() {
   const [events, setEvents] = useState<any[]>([]);

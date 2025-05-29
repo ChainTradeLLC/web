@@ -1,8 +1,8 @@
 import styles from './home.module.scss';
-import { Landing } from '@/components/home/landing/landing';
-import { Foreground } from '@/components/home/foreground/foreground';
-import { Feature } from '@/components/home/feature/feature';
-import { Community } from '@/components/home/community/community';
+import { Landing } from '@/src/components/home/landing/landing';
+import { Foreground } from '@/src/components/home/foreground/foreground';
+import { Feature } from '@/src/components/home/feature/feature';
+import { Community } from '@/src/components/home/community/community';
 
 export default function Home() {
   return (

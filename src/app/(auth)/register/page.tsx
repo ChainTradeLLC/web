@@ -5,14 +5,14 @@ import { useRouter } from 'next/navigation';
 import { signIn, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import styles from './register.module.scss';
-import { AuthLayout } from '@/components/ui/auth-layout';
-import { Button } from '@/components/ui/button';
-import { Checkbox, CheckboxField } from '@/components/ui/checkbox';
-import { Field, Label } from '@/components/ui/fieldset';
-import { Heading } from '@/components/ui/heading';
-import { Input } from '@/components/ui/input';
-import { Select } from '@/components/ui/select';
-import { Strong, Text, TextLink } from '@/components/ui/text';
+import { AuthLayout } from '@/src/components/ui/auth-layout';
+import { Button } from '@/src/components/ui/button';
+import { Checkbox, CheckboxField } from '@/src/components/ui/checkbox';
+import { Field, Label } from '@/src/components/ui/fieldset';
+import { Heading } from '@/src/components/ui/heading';
+import { Input } from '@/src/components/ui/input';
+import { Select } from '@/src/components/ui/select';
+import { Strong, Text, TextLink } from '@/src/components/ui/text';
 import Image from 'next/image';
 
 export default function Register() {

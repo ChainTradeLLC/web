@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from './foreground.module.scss';
 import localFont from 'next/font/local';
 import Link from 'next/link';
-import ContractBg from '@/components/contract/contract';
+import ContractBg from '@/src/components/contract/contract';
 import { FaLock } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import { SiAdguard } from "react-icons/si";

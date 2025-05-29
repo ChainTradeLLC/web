@@ -5,12 +5,12 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from './login.module.scss';
-import { Button } from '@/components/ui/button';
-import { Checkbox, CheckboxField } from '@/components/ui/checkbox';
-import { Field, Label } from '@/components/ui/fieldset';
-import { Heading } from '@/components/ui/heading';
-import { Input } from '@/components/ui/input';
-import { Strong, Text, TextLink } from '@/components/ui/text';
+import { Button } from '@/src/components/ui/button';
+import { Checkbox, CheckboxField } from '@/src/components/ui/checkbox';
+import { Field, Label } from '@/src/components/ui/fieldset';
+import { Heading } from '@/src/components/ui/heading';
+import { Input } from '@/src/components/ui/input';
+import { Strong, Text, TextLink } from '@/src/components/ui/text';
 import Image from 'next/image';
 
 export default function Login() {

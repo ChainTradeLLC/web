@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import prisma from '@/app/lib/prisma';
+import prisma from '@/src/app/lib/prisma';
 import FormData from "form-data";
 import Mailgun from "mailgun.js";
 

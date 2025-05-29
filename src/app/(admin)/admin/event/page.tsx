@@ -1,18 +1,18 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Divider } from '@/components/ui/divider'
-import { Dropdown, DropdownButton, DropdownItem, DropdownMenu } from '@/components/ui/dropdown'
-import { Heading } from '@/components/ui/heading'
-import { Input, InputGroup } from '@/components/ui/input'
+import { Badge } from '@/src/components/ui/badge'
+import { Button } from '@/src/components/ui/button'
+import { Divider } from '@/src/components/ui/divider'
+import { Dropdown, DropdownButton, DropdownItem, DropdownMenu } from '@/src/components/ui/dropdown'
+import { Heading } from '@/src/components/ui/heading'
+import { Input, InputGroup } from '@/src/components/ui/input'
 // import { Link } from '@/components/ui/link'
-import { Select } from '@/components/ui/select'
+import { Select } from '@/src/components/ui/select'
 import { getEvents } from '../data'
 import { EllipsisVerticalIcon, MagnifyingGlassIcon } from '@heroicons/react/16/solid'
 import type { Metadata } from 'next'
-import Modal from '@/components/speaker/Modal';
-import EventModal from '@/components/events/event-modal';
+import Modal from '@/src/components/speaker/Modal';
+import EventModal from '@/src/components/events/event-modal';
 
 // export const metadata: Metadata = {
 //   title: 'Events',

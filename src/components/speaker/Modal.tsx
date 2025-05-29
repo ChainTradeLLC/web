@@ -10,9 +10,9 @@ import {
     useTransform,
 } from "motion/react"
 import { useEffect, useRef, useState } from "react"
-import { Field, Label } from '@/components/ui/fieldset'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
+import { Field, Label } from '@/src/components/ui/fieldset'
+import { Input } from '@/src/components/ui/input'
+import { Textarea } from '@/src/components/ui/textarea'
 // import RichTextEditor from '@/components/RichTextEditor/RichTextEditor'
 
 /**

@@ -1,5 +1,5 @@
 import '../globals.scss';
-import AuthProvider from '@/app/providers/auth';
+import AuthProvider from '@/src/app/providers/auth';
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
 //   const { data: session, status } = useSession();

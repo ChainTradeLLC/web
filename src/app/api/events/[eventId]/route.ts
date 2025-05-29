@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import prisma from '@/app/lib/prisma';
+import prisma from '@/src/app/lib/prisma';
 
 // @ts-ignore
 export async function GET(req: Request, { params }: { params: Promise<{ eventId: string }> }) {

@@ -16,8 +16,8 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
-import WaitlistHeader from '@/components/waitlist/header'
-import WaitlistHeaderMobile from '@/components/waitlist/mob_header'
+import WaitlistHeader from '@/src/components/waitlist/header'
+import WaitlistHeaderMobile from '@/src/components/waitlist/mob_header'
 
 const resources = [
   { name: 'Guides', description: 'Get a headstart on navigating your way around ChainTrade blockchain', href: '#', icon: QuestionMarkCircleIcon },

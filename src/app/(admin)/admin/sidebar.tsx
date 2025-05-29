@@ -1,6 +1,6 @@
 'use client'
 
-import { Avatar } from '@/components/ui/avatar'
+import { Avatar } from '@/src/components/ui/avatar'
 import {
   Dropdown,
   DropdownButton,
@@ -8,8 +8,8 @@ import {
   DropdownItem,
   DropdownLabel,
   DropdownMenu,
-} from '@/components/ui/dropdown'
-import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/ui/navbar'
+} from '@/src/components/ui/dropdown'
+import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/src/components/ui/navbar'
 import {
   Sidebar,
   SidebarBody,
@@ -20,8 +20,8 @@ import {
   SidebarLabel,
   SidebarSection,
   SidebarSpacer,
-} from '@/components/ui/sidebar'
-import { SidebarLayout } from '@/components/ui/sidebar-layout'
+} from '@/src/components/ui/sidebar'
+import { SidebarLayout } from '@/src/components/ui/sidebar-layout'
 import { getEvents } from './data'
 import {
   ArrowRightStartOnRectangleIcon,

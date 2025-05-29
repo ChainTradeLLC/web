@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import '../globals.scss';
-import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
-import AuthProvider from '@/app/providers/auth';
+import Header from '@/src/components/header/header';
+import Footer from '@/src/components/footer/footer';
+import AuthProvider from '@/src/app/providers/auth';
 
 export const metadata: Metadata = {
   title: 'ChainTrade - Home',

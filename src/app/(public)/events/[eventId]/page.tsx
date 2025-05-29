@@ -4,13 +4,13 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import { Card, CardHeader, CardBody, Input, Button } from '@nextui-org/react';
 import styles from './event.module.scss';
-import LoadingRipple from '@/components/ui/loading';
+import LoadingRipple from '@/src/components/ui/loading';
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import { FaVideo } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
 import moment from 'moment';
 import localFont from 'next/font/local';
-import NewEventModal from '@/components/events/register';
+import NewEventModal from '@/src/components/events/register';
 
   const Nexa_Bold = localFont({
       src: '../../../../app/assets/fonts/nexaserif_trial-extrabold.otf',

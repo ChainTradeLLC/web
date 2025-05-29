@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import '../globals.scss';
-import AuthProvider from '@/app/providers/auth';
-import { cn } from '@/app/lib/utils';
+import AuthProvider from '@/src/app/providers/auth';
+import { cn } from '@/src/app/lib/utils';
 
 // export const metadata: Metadata = {
 //   title:

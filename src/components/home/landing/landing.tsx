@@ -8,8 +8,8 @@ import localFont from 'next/font/local';
 import Link from 'next/link';
 import { animate, stagger } from 'motion';
 import { splitText } from 'motion-plus'; 
-import { GridPattern } from '@/components/ui/grid';
-import WaitlistModal from '@/components/waitlist/modal'
+import { GridPattern } from '@/src/components/ui/grid';
+import WaitlistModal from '@/src/components/waitlist/modal'
 
 const Nexa_Bold = localFont({
     src: '../../../app/assets/fonts/nexaserif_trial-extrabold.otf',

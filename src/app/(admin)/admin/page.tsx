@@ -1,10 +1,10 @@
 import { Stat } from './stat'
-import { Avatar } from '@/components/ui/avatar'
-import { Heading, Subheading } from '@/components/ui/heading'
-import { Select } from '@/components/ui/select'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Avatar } from '@/src/components/ui/avatar'
+import { Heading, Subheading } from '@/src/components/ui/heading'
+import { Select } from '@/src/components/ui/select'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/src/components/ui/table'
 import { getRecentOrders } from './data'
-import { authOptions } from '@/app/lib/authOptions';
+import { authOptions } from '@/src/app/lib/authOptions';
 import { getServerSession } from 'next-auth'
 
 async function Admin() {

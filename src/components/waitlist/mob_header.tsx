@@ -9,10 +9,10 @@ import {
     useTransform,
 } from "motion/react"
 import { useEffect, useRef, useState } from "react"
-import { Field, Label } from '@/components/ui/fieldset'
-import { Input } from '@/components/ui/input'
-import { Heading } from '@/components/ui/heading'
-import { fireCelebration } from '@/app/lib/confettiPresets';
+import { Field, Label } from '@/src/components/ui/fieldset'
+import { Input } from '@/src/components/ui/input'
+import { Heading } from '@/src/components/ui/heading'
+import { fireCelebration } from '@/src/app/lib/confettiPresets';
 import styl from './modal.module.scss';
 import localFont from "next/font/local";
 
