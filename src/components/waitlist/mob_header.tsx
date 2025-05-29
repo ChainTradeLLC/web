@@ -15,11 +15,8 @@ import { Heading } from '@/src/components/ui/heading'
 import { fireCelebration } from '@/src/app/lib/confettiPresets';
 import styl from './modal.module.scss';
 import localFont from "next/font/local";
-
-const Nexa_Bold = localFont({
-    src: '../../app/assets/fonts/nexaserif_trial-extrabold.otf',
-    display: 'swap',
-});
+//@ts-ignore
+import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font';
 
 
 

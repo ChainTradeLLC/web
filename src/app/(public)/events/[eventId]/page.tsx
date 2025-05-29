@@ -11,21 +11,8 @@ import { FaClock } from "react-icons/fa6";
 import moment from 'moment';
 import localFont from 'next/font/local';
 import NewEventModal from '@/src/components/events/register';
-
-  const Nexa_Bold = localFont({
-      src: '../../../../app/assets/fonts/nexaserif_trial-extrabold.otf',
-      display: 'swap',
-  });
-  
-  const Mont = localFont({
-      src: '../../../../app/assets/fonts/mont-extralightdemo.otf',
-      display: 'swap',
-  });
-  
-  const Mont_Bold = localFont({
-      src: '../../../../app/assets/fonts/mont-heavydemo.otf',
-      display: 'swap',
-  });
+//@ts-ignore
+import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font';
 
   type PageProps = {
     params: {

@@ -10,21 +10,8 @@ import { animate, stagger } from 'motion';
 import { splitText } from 'motion-plus'; 
 import { GridPattern } from '@/src/components/ui/grid';
 import WaitlistModal from '@/src/components/waitlist/modal'
-
-const Nexa_Bold = localFont({
-    src: '../../../app/assets/fonts/nexaserif_trial-extrabold.otf',
-    display: 'swap',
-});
-
-const Mont = localFont({
-    src: '../../../app/assets/fonts/mont-extralightdemo.otf',
-    display: 'swap',
-});
-
-const Mont_Bold = localFont({
-    src: '../../../app/assets/fonts/mont-heavydemo.otf',
-    display: 'swap',
-});
+//@ts-ignore
+import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font';
 
 
 export function Landing() {

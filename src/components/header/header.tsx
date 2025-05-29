@@ -18,6 +18,8 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import WaitlistHeader from '@/src/components/waitlist/header'
 import WaitlistHeaderMobile from '@/src/components/waitlist/mob_header'
+//@ts-ignore
+import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font'
 
 const resources = [
   { name: 'Guides', description: 'Get a headstart on navigating your way around ChainTrade blockchain', href: '#', icon: QuestionMarkCircleIcon },
@@ -57,16 +59,6 @@ const community = [
         description: "Access our support team and community forums for help with your blockchain journey."
       }
 ];
-
-const Nexa_Bold = localFont({
-    src: '../../app/assets/fonts/nexaserif_trial-bold.otf',
-    display: 'swap',
-});
-
-const Mont = localFont({
-    src: '../../app/assets/fonts/mont-extralightdemo.otf',
-    display: 'swap',
-});
 
 export default function Header() {
   const pathname = usePathname();
