@@ -174,7 +174,7 @@ export default function Page() {
         <ul role="list" className="divide-y divide-gray-800 xl:col-span-3">
           {event.eventSpeakers.map((speak: any) => (
             <li key={speak.speaker.name} className="flex flex-col gap-10 py-12 first:pt-0 last:pb-0 sm:flex-row">
-              <img alt="" src={`${speak.speaker.image}`} className="aspect-4/5 w-52 h-80 flex-none rounded-2xl object-cover" />
+              <img alt="" src={`${speak.speaker.image}`} className="aspect-4/5 w-52 h-60 flex-none rounded-2xl object-cover" />
               <div className={"max-w-xl flex-auto"}>
                 <h3 className={`${styles.spek_title} text-lg/8 font-semibold tracking-tight text-gray-900`}>{speak.speaker.name}</h3>
                 <p className={`${styles.spek_role}  text-base/7 text-gray-600`}>{speak.speaker.job}</p>

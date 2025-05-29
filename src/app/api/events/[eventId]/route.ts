@@ -9,7 +9,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ eventId:
       where: { id: eventId },
       include: {
         organizer: { select: { name: true, email: true } },
-        eventSpeakers: { include: { speaker: { select: { id: true, name: true, bio: true, image: true } } } },
+        eventSpeakers: { include: { speaker: { select: { id: true, name: true, bio: true, image: true, job: true } } } },
         registrations: { select: { id: true, name: true, email: true, createdAt: true } },
       },
     });
