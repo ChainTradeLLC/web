@@ -46,7 +46,7 @@ model Speaker {
   name          String
   bio           String?
   image         String?
-  Job           String?
+  job           String?
   eventSpeakers EventSpeaker[] 
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
