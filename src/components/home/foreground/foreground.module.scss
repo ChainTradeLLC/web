@@ -45,6 +45,7 @@
         h2 {
             line-height: 120%;
             // opacity: 0.9;
+            visibility: hidden;
             @media (max-width: 1200px) {
                 line-height: 120%;
             }
@@ -275,9 +276,11 @@
             @media (max-width: 994px) {
               }
               @media (max-width: 768px) {
+                opacity: 1;
               }
               @media (max-width: 480px) {
                 font-size: calc(16px / 100 * 70);
+                opacity: 1;
               }
         }
     }

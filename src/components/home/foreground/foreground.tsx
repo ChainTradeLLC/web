@@ -36,6 +36,8 @@ export function Foreground() {
 
         document.fonts.ready.then(() => {
           const { words } = splitText(h2Ref.current!);
+          h2Ref.current.style.visibility = 'visible';
+
           animate(
             words,
             { opacity: [0, 1], y: [10, 0] },
@@ -58,7 +60,7 @@ export function Foreground() {
           );
         });
       },
-      { threshold: 0.3 }  
+      { threshold: 0.1 }  
     );
 
     io.observe(root);

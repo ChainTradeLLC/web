@@ -34,6 +34,10 @@ export function Landing() {
           document.fonts.ready.then(() => {
             const { words } = splitText(primaryRef.current!);
       const { words: words2 } = splitText(secondaryRef.current!);
+      landingRef.current.style.visibility = 'visible';
+      primaryRef.current.style.visibility = 'visible';
+      secondaryRef.current.style.visibility = 'visible';
+      buttonRef.current.style.visibility = 'visible';
 
             animate(
         words,
@@ -41,7 +45,7 @@ export function Landing() {
         {
           type: 'spring',
           duration: 2,
-          bounce: 0,
+          bounce: 0.2,
           delay: stagger(0.05),
         },
       );
@@ -52,7 +56,7 @@ export function Landing() {
         {
           type: 'spring',
           duration: 1.5,
-          bounce: 0,
+          bounce: 0.2,
           delay: stagger(0.05),
         },
       );
@@ -65,7 +69,7 @@ export function Landing() {
 
           });
         },
-        { threshold: 0.3 }  
+        { threshold: 0.1 }  
       );
   
       io.observe(root);

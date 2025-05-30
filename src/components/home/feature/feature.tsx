@@ -33,6 +33,7 @@ export function Feature() {
         
                 document.fonts.ready.then(() => {
                   const { words } = splitText(headerRef.current!);
+                  headerRef.current.style.visibility = 'visible';
                   animate(
                     words,
                     { opacity: [0, 1], y: [10, 0] },
@@ -60,7 +61,7 @@ export function Feature() {
                   );
                 });
               },
-              { threshold: 0.3 }  
+              { threshold: 0.06 }  
             );
         
             io.observe(root);

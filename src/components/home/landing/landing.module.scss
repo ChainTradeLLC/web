@@ -13,6 +13,7 @@
       } 
       .primary_text {
         line-height: 120%;
+        visibility: hidden;
         @media (max-width: 994px) {
           font-size: calc(48px / 100 * 90);
           line-height: calc(58px / 100 * 90);
@@ -27,6 +28,7 @@
         }
     }
     .secondary_text {
+      visibility: hidden;
       @media (max-width: 994px) {
         font-size: calc(16px / 100 * 90);
           line-height: calc(24px / 100 * 90);
@@ -54,6 +56,7 @@
       align-items: center;
       font-size: 1.1em;
       transition: background .2s;
+      visibility: hidden;
       @media (max-width: 994px) {
         width: 40%;
       height: calc(60px / 100 * 90);
@@ -78,5 +81,5 @@
 }
 
 .split-word { 
-  will-change: transform, opacity;
+  will-change: transform, opacity, visibility;
 }
