@@ -21,6 +21,33 @@ import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font';
 
 export default function WaitlistModal() {
     const [isOpen, setIsOpen] = useState(false)
+    const buttonRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        const root = buttonRef.current;
+        if (!root) return;
+    
+        const io = new IntersectionObserver(
+          (entries, observer) => {
+            if (!entries[0].isIntersecting) return;
+            observer.disconnect(); 
+    
+            document.fonts.ready.then(() => {
+                root.style.visibility = 'visible';
+        animate(
+          buttonRef.current!,
+          { opacity: [0, 1], y: [10, 0] },
+          { delay: 1.4, duration: 0.6 }
+        );
+  
+            });
+          },
+          { threshold: 0.1 }  
+        );
+    
+        io.observe(root);
+        return () => io.disconnect();          
+      }, []);
 
     return (
         <>
@@ -30,6 +57,7 @@ export default function WaitlistModal() {
                 className={`${Nexa_Bold.className} openButtonn rounded-md text-sm font-bold uppercase shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600`}
                 onClick={() => setIsOpen(true)}
                 data-primary-action
+                ref={buttonRef}
             >
                 Join Waitlist
             </motion.button>
@@ -269,6 +297,7 @@ function StyleSheet() {
       align-items: center;
       font-size: 1.1em;
       transition: background .2s;
+      visibility: hidden;
       @media (max-width: 994px) {
         width: 40%;
       height: calc(60px / 100 * 90);

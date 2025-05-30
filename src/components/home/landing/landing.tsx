@@ -18,7 +18,7 @@ export function Landing() {
   const landingRef = useRef<HTMLDivElement>(null);
   const primaryRef   = useRef<HTMLHeadingElement>(null);
   const secondaryRef   = useRef<HTMLParagraphElement>(null);
-  const buttonRef   = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
       const root = landingRef.current;
@@ -37,7 +37,7 @@ export function Landing() {
       landingRef.current.style.visibility = 'visible';
       primaryRef.current.style.visibility = 'visible';
       secondaryRef.current.style.visibility = 'visible';
-      buttonRef.current.style.visibility = 'visible';
+      // buttonRef.current.style.visibility = 'visible';
 
             animate(
         words,
