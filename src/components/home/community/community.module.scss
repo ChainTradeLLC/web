@@ -19,12 +19,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width: 768px) {
+            margin-top: 2.5rem !important;
+            margin-bottom: 1rem;
+          }
         .icons {
             width: 80%;
             display: flex;
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: center;
+            cursor: pointer;
+            @media (max-width: 1200px) {
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+                width: 100%;
+              }
+              @media (max-width: 480px) {
+                width: 100%;
+              }
             .icon {
                 flex: 0 23%;
                 height: 100px;
@@ -35,11 +50,33 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 8px;
+                @media (max-width: 1200px) {
+                }
+                @media (max-width: 994px) {
+                    flex: 0 31%;
+                    margin-bottom: 2%;
+                margin-right: 2%;
+                  }
+                  @media (max-width: 768px) {
+                  }
+                  @media (max-width: 480px) {
+                    flex: 0 46%;
+                    margin-bottom: 2%;
+                margin-right: 2%;
+                  }
                 svg {
                     width: 50%;
                     height: 50%;
                     fill: #909090;
                     opacity: 0.9;
+                    @media (max-width: 1200px) {
+                    }
+                    @media (max-width: 994px) {
+                      }
+                      @media (max-width: 768px) {
+                      }
+                      @media (max-width: 480px) {
+                      }
                 }
             }
         }

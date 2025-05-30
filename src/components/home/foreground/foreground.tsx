@@ -81,7 +81,7 @@ export function Foreground() {
         </div>
         <ContractBg />
         <div className={`${styles.header}`}>
-            <h2 className={`${Mont_Bold.className} tracking-tight text-balance uppercase text-5xl`} ref={h2Ref}>Pioneering inclusive commerce for all</h2>
+            <h2 className={`${Mont_Bold.className} tracking-tight text-balance uppercase max-xs:text-2xl max-sm:text-4xl max-md:text-4xl text-5xl`} ref={h2Ref}>Pioneering inclusive commerce for all</h2>
         </div>
         <div className={`${styles.lock}`} ref={div1Ref}>
             <FaLock className={`${styles.lock_icon}`} />

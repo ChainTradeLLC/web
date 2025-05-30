@@ -18,14 +18,14 @@ import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font';
 export function Community() {
     const commsRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<HTMLHeadingElement>(null);
-    const soc1Ref = useRef<HTMLDivElement>(null);
-    const soc2Ref = useRef<HTMLDivElement>(null);
-    const soc3Ref = useRef<HTMLDivElement>(null);
-    const soc4Ref = useRef<HTMLDivElement>(null);
-    const soc5Ref = useRef<HTMLDivElement>(null);
-    const soc6Ref = useRef<HTMLDivElement>(null);
-    const soc7Ref = useRef<HTMLDivElement>(null);
-    const soc8Ref = useRef<HTMLDivElement>(null);
+    const soc1Ref = useRef<HTMLAnchorElement>(null);
+    const soc2Ref = useRef<HTMLAnchorElement>(null);
+    const soc3Ref = useRef<HTMLAnchorElement>(null);
+    const soc4Ref = useRef<HTMLAnchorElement>(null);
+    const soc5Ref = useRef<HTMLAnchorElement>(null);
+    const soc6Ref = useRef<HTMLAnchorElement>(null);
+    const soc7Ref = useRef<HTMLAnchorElement>(null);
+    const soc8Ref = useRef<HTMLAnchorElement>(null);
 
     useEffect(() => {
           const root = commsRef.current;
@@ -100,14 +100,14 @@ export function Community() {
         </div>
         <div className={`${styles.socials}`}>
             <div className={`${styles.icons}`}>
-            <div className={`${styles.x} ${styles.icon}`} ref={soc1Ref}><BsTwitterX /></div>
-            <div className={`${styles.telegram} ${styles.icon}`} ref={soc2Ref}><FaTelegramPlane /></div>
-            <div className={`${styles.linkedin} ${styles.icon}`} ref={soc3Ref}><FaLinkedinIn /></div>
-            <div className={`${styles.instagram} ${styles.icon}`} ref={soc4Ref}><FaInstagram /></div>
-            <div className={`${styles.github} ${styles.icon}`} ref={soc5Ref}><FaGithub /></div>
-            <div className={`${styles.facebook} ${styles.icon}`} ref={soc6Ref}><FaFacebookF /></div>
-            <div className={`${styles.facebook} ${styles.icon}`} ref={soc7Ref}><FaTiktok /></div>
-            <div className={`${styles.facebook} ${styles.icon}`} ref={soc8Ref}><FaYoutube /></div>
+            <Link href={`https://x.com/ChainTradeLLC`} className={`${styles.x} ${styles.icon}`} ref={soc1Ref}><BsTwitterX /></Link>
+            <Link href={`https://t.me/+oV7bIu50RpQ2NDNk`} className={`${styles.telegram} ${styles.icon}`} ref={soc2Ref}><FaTelegramPlane /></Link>
+            <Link href={`https://www.linkedin.com/company/chain-trade-llc`} className={`${styles.linkedin} ${styles.icon}`} ref={soc3Ref}><FaLinkedinIn /></Link>
+            <Link href={`https://www.instagram.com/chaintradellc/`} className={`${styles.instagram} ${styles.icon}`} ref={soc4Ref}><FaInstagram /></Link>
+            <Link href={`https://github.com/ChainTrade-Blockchain`} className={`${styles.github} ${styles.icon}`} ref={soc5Ref}><FaGithub /></Link>
+            <Link href={`https://web.facebook.com/profile.php?id=61576479951529`} className={`${styles.facebook} ${styles.icon}`} ref={soc6Ref}><FaFacebookF /></Link>
+            <Link href={`https://web.facebook.com/profile.php?id=61576479951529`} className={`${styles.facebook} ${styles.icon}`} ref={soc7Ref}><FaTiktok /></Link>
+            <Link href={`https://www.youtube.com/@ChainTrade`} className={`${styles.facebook} ${styles.icon}`} ref={soc8Ref}><FaYoutube /></Link>
             </div>
         </div>
       </div>

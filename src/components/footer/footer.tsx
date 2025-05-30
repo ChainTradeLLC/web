@@ -36,7 +36,7 @@ const navigation = {
     social: [
       {
         name: 'Facebook',
-        href: '#',
+        href: 'https://web.facebook.com/profile.php?id=61576479951529',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -49,7 +49,7 @@ const navigation = {
       },
       {
         name: 'Instagram',
-        href: '#',
+        href: 'https://www.instagram.com/chaintradellc',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -62,7 +62,7 @@ const navigation = {
       },
       {
         name: 'X',
-        href: '#',
+        href: 'https://x.com/ChainTradeLLC',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
@@ -71,7 +71,7 @@ const navigation = {
       },
       {
         name: 'GitHub',
-        href: '#',
+        href: 'https://github.com/ChainTrade-Blockchain',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -84,7 +84,7 @@ const navigation = {
       },
       {
         name: 'YouTube',
-        href: '#',
+        href: 'https://www.youtube.com/@ChainTrade',
         icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
@@ -104,6 +104,39 @@ export default function Footer() {
     threshold: 0,
   });
 
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [aspectRatio, setAspectRatio] = useState('xMidYMid slice');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+
+      handleResize();
+
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth >= 320 && windowWidth <= 480) {
+      setAspectRatio('xMidYMid meet');
+    } else if (windowWidth > 480 && windowWidth <= 600) {
+      setAspectRatio('xMidYMid meet');
+    } else if (windowWidth > 600 && windowWidth <= 768) {
+      setAspectRatio('xMidYMid meet');
+    } else if (windowWidth > 768 && windowWidth <= 992) {
+      setAspectRatio('xMidYMid meet');
+    } else if (windowWidth > 992 && windowWidth <= 1200) {
+      setAspectRatio('xMidYMid meet');
+    } else {
+      setAspectRatio('xMidYMid meet');
+    }
+  }, [windowWidth]);
+
   // useEffect(() => {
   //   const svgElement = svgRef.current;
   //   if (svgElement) {
@@ -118,7 +151,7 @@ export default function Footer() {
 
   return (
       <footer className={`${styles.footer}`} ref={ref}>
-        <svg id="Layer_2" className={`${styles.f_logo} ${inView ? `${styles.animate}` : ``}`} data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.19 340.47" preserveAspectRatio="xMidYMid slice">
+        <svg id="Layer_2" className={`${styles.f_logo} ${inView ? `${styles.animate}` : ``}`} data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.19 340.47" preserveAspectRatio={aspectRatio}>
   <g id="Layer_1-2" data-name="Layer 1">
     <path className={`${styles.f1} cls-1`} d="M224.78,291.6l94.21-111.37-87.39-11.15-61.78,73.06c-29.38,34.73-55.59,36.39-79.32,16.32-24-20.32-26.75-46.45,2.62-81.18l91-107.58-88.77-11.27-61,72.13c-51.16,60.5-44.48,124.21,15.43,174.87s123.82,46.66,175-13.83Z"/>
     <path className={`${styles.f2} cls-1`} d="M394.14,35.69c-59.51-51.13-123.47-47.63-175.1,12.46l-61.56,71.65,25.19,85.85,91.81-106.87c29.64-34.51,55.87-36,79.74-15.45,23.57,20.25,26.09,46.4-3.55,80.9l-62.36,72.58,24.81,84.53,95.09-110.67c51.62-60.09,45.44-123.85-14.07-174.98Z"/>

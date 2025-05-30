@@ -3,10 +3,43 @@
     width: 100%;
     .text {
       visibility: hidden;
+      @media (max-width: 994px) {
+      }
+      @media (max-width: 768px) {
+      }
+      @media (max-width: 480px) {
+      } 
       .primary_text {
         line-height: 120%;
+        @media (max-width: 994px) {
+          font-size: calc(48px / 100 * 90);
+          line-height: calc(58px / 100 * 90);
+        }
+        @media (max-width: 768px) {
+          font-size: calc(48px / 100 * 80);
+          line-height: calc(58px / 100 * 80);
+        }
+        @media (max-width: 480px) {
+          font-size: calc(48px / 100 * 70);
+          line-height: calc(58px / 100 * 70); 
+        }
     }
     .secondary_text { 
+      @media (max-width: 994px) {
+        font-size: calc(16px / 100 * 90);
+          line-height: calc(24px / 100 * 90);
+          padding: 0;
+      }
+      @media (max-width: 768px) {
+        font-size: calc(16px / 100 * 80);
+          line-height: calc(24px / 100 * 80);
+          padding: 0;
+      }
+      @media (max-width: 480px) {
+        font-size: calc(16px / 100 * 80);
+          line-height: calc(24px / 100 * 80);
+          padding: 0;
+      }
     }
     .landing_btn {
       background: #ffc300;
@@ -19,6 +52,21 @@
       align-items: center;
       font-size: 1.1em;
       transition: background .2s;
+      @media (max-width: 994px) {
+        width: 40%;
+      height: calc(60px / 100 * 90);
+      font-size: calc(1.1em / 100 * 90);
+      }
+      @media (max-width: 768px) {
+        width: 60%;
+      height: calc(60px / 100 * 90);
+      font-size: calc(1.1em / 100 * 90);
+      }
+      @media (max-width: 480px) {
+        width: 90%;
+      height: calc(60px / 100 * 90);
+      font-size: calc(1.1em / 100 * 90);
+      }
     &:hover, &:focus {
         background: #0f0f0f;
       color: #F5F5F5;

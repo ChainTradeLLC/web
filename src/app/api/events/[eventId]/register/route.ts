@@ -48,8 +48,8 @@ export async function POST(req: Request, { params }: { params: Promise<{ eventId
       'Exploring practical pathways to boost trade within Africa, moving beyond policy frameworks like AfCFTA to spotlight real-world innovation and action.',
     location: `Zoom Webinar (link) · https://us06web.zoom.us/j/89804950427`,
   
-    start: '2025-06-12T16:00:00Z',
-    end:   '2025-06-12T17:00:00Z',
+    start: '2025-06-12T17:00:00Z',
+    end:   '2025-06-12T18:00:00Z',
   
     datePretty: 'Thu · 12 Jun 2025 · 5:00 PM – 6:00 PM WAT',
   }

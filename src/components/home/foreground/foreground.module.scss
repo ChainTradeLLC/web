@@ -5,11 +5,57 @@
     background: transparent;
     padding: 5%;
     visibility: hidden;
+    @media (max-width: 1200px) {
+    }
+    @media (max-width: 994px) {
+        height: 90vh;
+        padding-top: 0;
+      }
+      @media (max-width: 768px) {
+        padding-top: 0;
+        height: 80vh;
+      }
+      @media (max-width: 480px) {
+        padding-top: 2%;
+        height: 80vh;
+      }
     .header {
         width: 30%;
+        @media (max-width: 1200px) {
+            width: 40%;
+        }
+        @media (max-width: 994px) {
+            // width: 100%;
+            width: 40%;
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          @media (max-width: 480px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
         h2 {
             line-height: 120%;
             opacity: 0.9;
+            @media (max-width: 1200px) {
+                line-height: 120%;
+            }
+            @media (max-width: 994px) {
+                line-height: 120%;
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                font-size: 28px;
+              }
         }
     }
     .lock {
@@ -26,12 +72,46 @@
         padding: 40px 20px;
         border-radius: 12px;
         opacity: 0;
+        @media (max-width: 1200px) {
+            height: calc(60px / 100 * 90);
+            bottom: calc(15% / 100 * 90);
+        right: calc(12% / 100 * 90);
+        padding: calc(40px / 100 * 90) calc(20px / 100 * 90);
+        border-radius: calc(12px / 100 * 90);
+        }
+        @media (max-width: 994px) {
+          }
+          @media (max-width: 768px) {
+            bottom: 8%;
+        right: 5%;
+        width: 90%;
+        justify-content: flex-start;
+          }
+          @media (max-width: 480px) {
+            right: 5%;
+        width: 90%;
+        justify-content: flex-start;
+          }
         .lock_icon {
             margin-right: 15px;
             width: 30px;
             height: 30px;
             fill: #2d202a;
             stroke: #2d202a;
+            @media (max-width: 1200px) {
+                margin-right: calc(15px / 100 * 90);
+            width: calc(30px / 100 * 90);
+            height: calc(30px / 100 * 90);
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                margin-right: calc(15px / 100 * 70);
+            width: calc(30px / 100 * 70);
+            height: calc(30px / 100 * 70);
+              }
         }
         h3 {
             font-size: 16px;
@@ -39,6 +119,16 @@
             color: #080808;
             text-transform: capitalize;
             opacity: 0.8;
+            @media (max-width: 1200px) {
+                font-size: calc(16px / 100 * 90);
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                font-size: calc(16px / 100 * 70);
+              }
         }
     }
     .private {
@@ -55,12 +145,49 @@
         padding: 40px 20px;
         border-radius: 12px;
         opacity: 0;
+        @media (max-width: 1200px) {
+            height: calc(60px / 100 * 90);
+            bottom: calc(15% / 100 * 90);
+        right: calc(12% / 100 * 90);
+        padding: calc(40px / 100 * 90) calc(20px / 100 * 90);
+        border-radius: calc(12px / 100 * 90);
+        }
+        @media (max-width: 994px) {
+            top: 30%;
+        right: 12%;
+          }
+          @media (max-width: 768px) {
+            top: 20%;
+            right: 5%;
+            width: 90%;
+        justify-content: flex-start;
+          }
+          @media (max-width: 480px) {
+            top: 20%;
+            right: 5%;
+            width: 90%;
+        justify-content: flex-start;
+          }
         .private_icon {
             margin-right: 15px;
             width: 30px;
             height: 30px;
             fill: #2d202a;
             stroke: #2d202a;
+            @media (max-width: 1200px) {
+                margin-right: calc(15px / 100 * 90);
+            width: calc(30px / 100 * 90);
+            height: calc(30px / 100 * 90);
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                margin-right: calc(15px / 100 * 70);
+            width: calc(30px / 100 * 70);
+            height: calc(30px / 100 * 70);
+              }
         }
         h3 {
             font-size: 16px;
@@ -68,6 +195,16 @@
             color: #080808;
             text-transform: capitalize;
             opacity: 0.8;
+            @media (max-width: 1200px) {
+              font-size: calc(16px / 100 * 90);
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                font-size: calc(16px / 100 * 70);
+              }
         }
     }
     .secure {
@@ -84,12 +221,47 @@
         padding: 40px 20px;
         border-radius: 12px;
         opacity: 0;
+        @media (max-width: 1200px) {
+            height: calc(60px / 100 * 90);
+            bottom: calc(15% / 100 * 90);
+        right: calc(12% / 100 * 90);
+        padding: calc(40px / 100 * 90) calc(20px / 100 * 90);
+        border-radius: calc(12px / 100 * 90);
+        }
+        @media (max-width: 994px) {
+            left: 10%;
+          }
+          @media (max-width: 768px) {
+            top: 62%;
+            width: 90%;
+            left: 5%;
+        justify-content: flex-start;
+          }
+          @media (max-width: 480px) {
+            left: 5%;
+            width: 90%;
+        justify-content: flex-start;
+          }
         .secure_icon {
             margin-right: 15px;
             width: 30px;
             height: 30px;
             fill: #2d202a;
             stroke: #2d202a;
+            @media (max-width: 1200px) {
+                margin-right: calc(15px / 100 * 90);
+            width: calc(30px / 100 * 90);
+            height: calc(30px / 100 * 90);
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                margin-right: calc(15px / 100 * 70);
+            width: calc(30px / 100 * 70);
+            height: calc(30px / 100 * 70);
+              }
         }
         h3 {
             font-size: 16px;
@@ -97,6 +269,16 @@
             color: #080808;
             text-transform: capitalize;
             opacity: 0.8;
+            @media (max-width: 1200px) {
+                font-size: calc(16px / 100 * 90);
+            }
+            @media (max-width: 994px) {
+              }
+              @media (max-width: 768px) {
+              }
+              @media (max-width: 480px) {
+                font-size: calc(16px / 100 * 70);
+              }
         }
     }
 }

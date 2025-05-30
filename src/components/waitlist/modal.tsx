@@ -269,6 +269,21 @@ function StyleSheet() {
       align-items: center;
       font-size: 1.1em;
       transition: background .2s;
+      @media (max-width: 994px) {
+        width: 40%;
+      height: calc(60px / 100 * 90);
+      font-size: calc(1.1em / 100 * 90);
+      }
+      @media (max-width: 768px) {
+        width: 60%;
+      height: calc(60px / 100 * 80);
+      font-size: calc(1.1em / 100 * 80);
+      }
+      @media (max-width: 480px) {
+        width: 90%;
+      height: calc(60px / 100 * 90);
+      font-size: calc(1.1em / 100 * 90);
+      }
     &:hover, &:focus {
         background: #0f0f0f;
       color: #F5F5F5;
