@@ -71,7 +71,7 @@ export function Feature() {
       <div className={`${styles.feature}`} ref={featureRef}>
         <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-        <h2 className={`${styles.title} ${Mont_Bold.className} mx-auto mt-1 max-w-2xl text-center text-4xl font-semibold tracking-tight text-balance sm:text-5xl`} ref={headerRef}>
+        <h2 className={`${styles.title} ${Mont_Bold.className} mx-auto mt-1 max-w-2xl text-center text-4xl font-semibold tracking-tight text-balance sm:text-5xl transform-gpu`} ref={headerRef}>
           What is Trade like on Chaintrade Blockchain
         </h2>
         <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">

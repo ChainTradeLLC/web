@@ -66,7 +66,7 @@ export function Foreground() {
   }, []);
 
   return (
-      <div className={`${styles.foreground} isolate`} style={{ visibility: 'hidden' }} ref={rootRef}>
+      <div className={`${styles.foreground} isolate`} ref={rootRef}>
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-4 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
@@ -81,7 +81,7 @@ export function Foreground() {
         </div>
         <ContractBg />
         <div className={`${styles.header}`}>
-            <h2 className={`${Mont_Bold.className} tracking-tight text-balance uppercase max-xs:text-2xl max-sm:text-4xl max-md:text-4xl text-5xl`} ref={h2Ref}>Pioneering inclusive commerce for all</h2>
+            <h2 className={`${Mont_Bold.className} tracking-tight text-balance uppercase max-xs:text-2xl max-sm:text-4xl max-md:text-4xl text-5xl transform-gpu`} ref={h2Ref}>Pioneering inclusive commerce for all</h2>
         </div>
         <div className={`${styles.lock}`} ref={div1Ref}>
             <FaLock className={`${styles.lock_icon}`} />

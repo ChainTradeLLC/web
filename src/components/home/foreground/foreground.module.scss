@@ -44,7 +44,7 @@
           }
         h2 {
             line-height: 120%;
-            opacity: 0.9;
+            // opacity: 0.9;
             @media (max-width: 1200px) {
                 line-height: 120%;
             }
@@ -71,7 +71,7 @@
         align-items: center;
         padding: 40px 20px;
         border-radius: 12px;
-        opacity: 0;
+        // opacity: 0;
         @media (max-width: 1200px) {
             height: calc(60px / 100 * 90);
             bottom: calc(15% / 100 * 90);
@@ -144,7 +144,7 @@
         align-items: center;
         padding: 40px 20px;
         border-radius: 12px;
-        opacity: 0;
+        // opacity: 0;
         @media (max-width: 1200px) {
             height: calc(60px / 100 * 90);
             bottom: calc(15% / 100 * 90);
@@ -220,7 +220,7 @@
         align-items: center;
         padding: 40px 20px;
         border-radius: 12px;
-        opacity: 0;
+        // opacity: 0;
         @media (max-width: 1200px) {
             height: calc(60px / 100 * 90);
             bottom: calc(15% / 100 * 90);

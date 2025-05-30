@@ -21,15 +21,21 @@ export function Landing() {
   const buttonRef   = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!landingRef.current || !primaryRef.current || !secondaryRef.current) return;
-
-    landingRef.current.style.visibility = 'visible';
-
-    document.fonts.ready.then(() => {
-      const { words } = splitText(primaryRef.current!);
+      const root = landingRef.current;
+      if (!root || !primaryRef.current || !secondaryRef.current) return;
+  
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          if (!entries[0].isIntersecting) return;
+          observer.disconnect(); 
+  
+          root.style.visibility = 'visible';
+  
+          document.fonts.ready.then(() => {
+            const { words } = splitText(primaryRef.current!);
       const { words: words2 } = splitText(secondaryRef.current!);
 
-      animate(
+            animate(
         words,
         { opacity: [0, 1], y: [10, 0] },
         {
@@ -57,11 +63,57 @@ export function Landing() {
         { delay: 1.4, duration: 0.6 }
       );
 
-    });
-  }, []);
+          });
+        },
+        { threshold: 0.3 }  
+      );
+  
+      io.observe(root);
+      return () => io.disconnect();          
+    }, []);
+
+  // useEffect(() => {
+  //   if (!landingRef.current || !primaryRef.current || !secondaryRef.current) return;
+
+  //   landingRef.current.style.visibility = 'visible';
+
+  //   document.fonts.ready.then(() => {
+  //     const { words } = splitText(primaryRef.current!);
+  //     const { words: words2 } = splitText(secondaryRef.current!);
+
+  //     animate(
+  //       words,
+  //       { opacity: [0, 1], y: [10, 0] },
+  //       {
+  //         type: 'spring',
+  //         duration: 2,
+  //         bounce: 0,
+  //         delay: stagger(0.05),
+  //       },
+  //     );
+
+  //     animate(
+  //       words2,
+  //       { opacity: [0, 1], y: [10, 0] },
+  //       {
+  //         type: 'spring',
+  //         duration: 1.5,
+  //         bounce: 0,
+  //         delay: stagger(0.05),
+  //       },
+  //     );
+
+  //     animate(
+  //       buttonRef.current!,
+  //       { opacity: [0, 1], y: [10, 0] },
+  //       { delay: 1.4, duration: 0.6 }
+  //     );
+
+  //   });
+  // }, []);
 
   return (
-      <div className={`${styles.landing}`}>
+      <div className={`${styles.landing}`} ref={landingRef}>
         <GridPattern
             className="absolute inset-x-0 lg:top-14 -z-10 h-[1000px] w-full mask-[linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-50 stroke-neutral-950/5"
             yOffset={-96}
@@ -81,14 +133,14 @@ export function Landing() {
           />
         </div>
         <div className="mx-auto max-w-4xl">
-          <div className={`${styles.text} text-center`} ref={landingRef}>
-            <h1 className={`${styles.primary_text} ${Mont_Bold.className} tracking-tight text-balance uppercase text-5xl`} ref={primaryRef}>
+          <div className={`${styles.text} text-center`}>
+            <h1 className={`${styles.primary_text} ${Mont_Bold.className} tracking-tight text-balance uppercase text-5xl transform-gpu`} ref={primaryRef}>
               Powering open, decentralized commerce in Africa
             </h1>
-            <p className={`${styles.secondary_text} mt-4 text-pretty px-20`} ref={secondaryRef}>
+            <p className={`${styles.secondary_text} mt-4 text-pretty px-20 transform-gpu`} ref={secondaryRef}>
             Chaintrade is a decentralized blockchain built for commerce, enabling trustless and permissioned transactions on the blockchain. Businesses and individuals can engage in a secure trade environment without intermediaries.
             </p>
-            <div className="mt-12 flex items-center justify-center gap-x-6" ref={buttonRef}>
+            <div className="mt-12 flex items-center justify-center gap-x-6 transform-gpu" ref={buttonRef}>
               {/* <Link href="/" className={`${styles.landing_btn} ${Nexa_Bold.className} rounded-md text-sm font-bold uppercase shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600`}>
             Join Waitlist
           </Link> */}

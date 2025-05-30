@@ -1,8 +1,8 @@
 .landing {
     height: 90vh;
     width: 100%;
+    visibility: hidden;
     .text {
-      visibility: hidden;
       @media (max-width: 994px) {
       }
       @media (max-width: 768px) {
@@ -26,7 +26,7 @@
           line-height: calc(58px / 100 * 65); 
         }
     }
-    .secondary_text { 
+    .secondary_text {
       @media (max-width: 994px) {
         font-size: calc(16px / 100 * 90);
           line-height: calc(24px / 100 * 90);
