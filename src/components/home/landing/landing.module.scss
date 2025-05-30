@@ -9,7 +9,7 @@
         margin-top: -1rem;
       }
       @media (max-width: 480px) {
-        margin-top: -2rem;
+        margin-top: -3rem;
       } 
       .primary_text {
         line-height: 120%;
@@ -22,8 +22,8 @@
           line-height: calc(58px / 100 * 80);
         }
         @media (max-width: 480px) {
-          font-size: calc(48px / 100 * 70);
-          line-height: calc(58px / 100 * 70); 
+          font-size: calc(48px / 100 * 65);
+          line-height: calc(58px / 100 * 65); 
         }
     }
     .secondary_text { 
@@ -38,8 +38,8 @@
           padding: 0;
       }
       @media (max-width: 480px) {
-        font-size: calc(16px / 100 * 80);
-          line-height: calc(24px / 100 * 80);
+        font-size: calc(16px / 100 * 70);
+          line-height: calc(24px / 100 * 70);
           padding: 0;
       }
     }
