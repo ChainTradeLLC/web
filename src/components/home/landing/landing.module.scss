@@ -57,6 +57,7 @@
       font-size: 1.1em;
       transition: background .2s;
       visibility: hidden;
+      opacity: 0;
       @media (max-width: 994px) {
         width: 40%;
       height: calc(60px / 100 * 90);
