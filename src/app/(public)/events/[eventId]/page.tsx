@@ -11,6 +11,7 @@ import { FaClock } from "react-icons/fa6";
 import moment from 'moment';
 import localFont from 'next/font/local';
 import NewEventModal from '@/src/components/events/register';
+import NewEventModalX from '@/src/components/events/register-x';
 //@ts-ignore
 import { Nexa_Bold, Mont, Mont_Bold } from '@/src/app/lib/font';
 
@@ -106,6 +107,7 @@ export default function Page() {
           <h1 className={`${styles.title} mt-2 text-4xl font-semibold tracking-tight text-pretty sm:text-5xl`}>
           {event.title}
           </h1>
+          <a className={`${styles.sublink} ${Nexa_Bold.className} text-base/7 font-semibold`}><NewEventModalX eventId={eventId} /></a>
           <p className={`${styles.description} mt-6 text-xl/8`}>
           {event.description}
           </p>

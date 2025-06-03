@@ -101,12 +101,12 @@ export function Community() {
         <div className={`${styles.socials}`}>
             <div className={`${styles.icons}`}>
             <Link href={`https://x.com/ChainTradeLLC`} className={`${styles.x} ${styles.icon}`} ref={soc1Ref}><BsTwitterX /></Link>
-            <Link href={`https://t.me/+oV7bIu50RpQ2NDNk`} className={`${styles.telegram} ${styles.icon}`} ref={soc2Ref}><FaTelegramPlane /></Link>
+            <Link href={`https://t.me/chaintrade_llc`} className={`${styles.telegram} ${styles.icon}`} ref={soc2Ref}><FaTelegramPlane /></Link>
             <Link href={`https://www.linkedin.com/company/chain-trade-llc`} className={`${styles.linkedin} ${styles.icon}`} ref={soc3Ref}><FaLinkedinIn /></Link>
             <Link href={`https://www.instagram.com/chaintradellc/`} className={`${styles.instagram} ${styles.icon}`} ref={soc4Ref}><FaInstagram /></Link>
             <Link href={`https://github.com/ChainTrade-Blockchain`} className={`${styles.github} ${styles.icon}`} ref={soc5Ref}><FaGithub /></Link>
             <Link href={`https://web.facebook.com/profile.php?id=61576479951529`} className={`${styles.facebook} ${styles.icon}`} ref={soc6Ref}><FaFacebookF /></Link>
-            <Link href={`https://web.facebook.com/profile.php?id=61576479951529`} className={`${styles.facebook} ${styles.icon}`} ref={soc7Ref}><FaTiktok /></Link>
+            <Link href={`https://web.facebook.com/profile.php?id=61576479951529`} className={`${styles.tiktok} ${styles.icon}`} ref={soc7Ref}><FaTiktok /></Link>
             <Link href={`https://www.youtube.com/@ChainTrade`} className={`${styles.facebook} ${styles.icon}`} ref={soc8Ref}><FaYoutube /></Link>
             </div>
         </div>
