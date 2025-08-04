@@ -39,7 +39,7 @@ const Item = ({
       <div className={styles.preview}>
         <div className={styles.in}>
           <Parallax className={styles.gradient} speed={-6}>
-            <Image className={styles.image} src={gradient} fill alt="" />
+            <Image className={styles.image} src={gradient} fill alt="" quality={65} />
           </Parallax>
           <div className={styles.overlay}></div>
         </div>
