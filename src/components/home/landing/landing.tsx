@@ -31,8 +31,6 @@ export function Landing() {
         root.style.visibility = "visible";
 
         document.fonts.ready.then(() => {
-          const { words } = splitText(primaryRef.current!);
-          const { words: words2 } = splitText(secondaryRef.current!);
           landingRef.current.style.visibility = "visible";
           primaryRef.current.style.visibility = "visible";
           secondaryRef.current.style.visibility = "visible";
@@ -41,37 +39,35 @@ export function Landing() {
           // "decay" | "spring" | "keyframes" | "tween" | "inertia"
 
           animate(
-            words,
-            { opacity: [0, 1], y: [10, 0] },
+            primaryRef.current!,
+            { opacity: [0, 1], y: [20, 0] },
             {
-              type: "tween",
-              duration: 0.5,
+              duration: 0.3,
               bounce: 0.2,
-              delay: stagger(0.05),
+              delay: 0,
             },
           );
 
           animate(
-            words2,
-            { opacity: [0, 1], y: [10, 0] },
+            secondaryRef.current!,
+            { opacity: [0, 1], y: [20, 0] },
             {
-              type: "spring",
-              duration: 1,
+              duration: 0.4,
               bounce: 0.2,
-              delay: stagger(0.03),
+              delay: 0.2,
             },
           );
 
           animate(
             buttonRef.current!,
             { opacity: [0, 1], y: [10, 0] },
-            { delay: 1, duration: 0.4 },
+            { delay: 0.4, duration: 0.5 },
           );
 
           animate(
             dashboardRef.current!,
             { opacity: [0, 1], y: [20, 0], scale: [0.9, 1] },
-            { delay: 0.5, duration: 0.2 },
+            { delay: 0.6, duration: 0.5},
           );
         });
       },
@@ -151,13 +147,12 @@ export function Landing() {
             className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#FFC300] to-[#333333] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
           />
         </div>
-        <div className="mx-auto">
           <div className={`${styles.text} text-center`}>
             <h1
               className={`${styles.primary_text} ${Mont_Bold.className} tracking-tight text-balance uppercase transform-gpu`}
               ref={primaryRef}
             >
-              The <span>Decentralized</span> Protocol for global commerce
+              The Decentralized Protocol for global commerce
               onchain
             </h1>
             <p
@@ -187,7 +182,6 @@ export function Landing() {
               </button>
             </div>
           </div>
-        </div>
         <div className={`${styles.dashboard}`} ref={dashboardRef}>
           <div className={`${styles.dashboard_container} shadow-2xl`}>
             <div className={`${styles.box}`}>
