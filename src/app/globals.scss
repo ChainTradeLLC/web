@@ -1,4 +1,4 @@
-@use './colors.scss' as colors;
+@use "./colors.scss" as colors;
 @use "tailwindcss";
 
 @tailwind base;
@@ -6,20 +6,29 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'NexaSerif';
-    src: url('/fonts/nexaserif_trial-regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
+  font-family: "NexaSerif";
+  src: url("/fonts/nexaserif_trial-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  @font-face {
-    font-family: 'Mont';
-    src: url('/fonts/mont-heavydemo.otf') format('opentype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
+@font-face {
+  font-family: "Mont";
+  src: url("/fonts/mont-heavydemo.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --breakpoint-xs: 320px; /* Extra small devices (portrait phones) */
+  --breakpoint-sm: 576px; /* Small devices (landscape phones) */
+  --breakpoint-md: 768px; /* Medium devices (tablets) */
+  --breakpoint-lg: 992px; /* Large devices (desktops) */
+  --breakpoint-xl: 1200px; /* Extra large devices (large desktops) */
+  --breakpoint-xxl: 1400px; /* Extra extra large devices */
+}
 
 //   @layer base {
 //     :root {
@@ -45,7 +54,7 @@
 //       --ring: 222.2 84% 4.9%;
 //       --radius: 0.5rem;
 //       --sxipher-text-primary: 358 82% 39%; // Bright red
-  
+
 //       // Additional colors (RGB format)
 //       --color-black: 0 0 0;
 //       --color-white: 255 255 255;
@@ -69,7 +78,7 @@
 //       --color-gray-900: 24 24 27;
 //       --color-gray-950: 18 18 21;
 //       --color-overlay: rgb(var(--color-black) / 60%);
-  
+
 //       // Map SCSS variables to CSS variables
 //       --primary-color: #{colors.$primary-color};
 //       --secondary-color: #{colors.$secondary-color};
@@ -80,7 +89,7 @@
 //       --error-color: #{colors.$error-color};
 //       --dark-900: #{colors.$dark-900};
 //       --tertiary-900: #{colors.$tertiary-900};
-  
+
 //       // Spacing, sizes, shadows, etc.
 //       --space-0: 0;
 //       --space-1: 0.125rem;
@@ -134,15 +143,15 @@
 //       --z-badge: 10000000;
 //       --opacity-hover: 0.8;
 //       --opacity-disabled: 0.5;
-  
+
 //       // Use SCSS variable for background and color
 //       background-color: colors.$background-color;
 //       color: colors.$text-color;
-  
+
 //       accent-color: var(--accent-color);
 //     }
 // }
-  
+
 //     // Dark mode
 //     .dark {
 //       --background: 222.2 84% 4.9%; // Dark gray
@@ -164,7 +173,7 @@
 //       --border: 217.2 32.6% 17.5%;
 //       --input: 217.2 32.6% 17.5%;
 //       --ring: 212.7 26.8% 83.9%;
-  
+
 //       // Dark mode specific colors (from media query)
 //       --color-red: 248 113 113;
 //       --color-green: 162 230 53;
@@ -181,7 +190,7 @@
 //       --color-text-light: rgb(var(--color-gray-300));
 //       --color-text-lighter: rgb(var(--color-gray-400));
 //       --color-text-lightest: rgb(var(--color-gray-500));
-  
+
 //       // Comment highlights
 //       --comment-highlight-composing: #0079a2;
 //       --comment-highlight-composing-border: #0079a2;
@@ -189,7 +198,7 @@
 //       --comment-highlight-complete-border: #00748d;
 //       --comment-highlight-selected: #0079a2;
 //       --comment-highlight-selected-border: #009cd3;
-  
+
 //       color-scheme: dark;
 //       background-color: colors.$dark-900;
 //       color: colors.$tertiary-900;
@@ -213,20 +222,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: colors.$background-color;
   color: colors.$text-color;
-  font-family: 'NexaSerif', serif;
+  font-family: "NexaSerif", serif;
   position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Mont', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Mont", sans-serif;
   color: colors.$text-color;
 }
 
-.my-p      { margin: 0 0 .8em 0; }
-.my-h1     { font-size: 1.5rem; font-weight: 600; }
-.my-link   { text-decoration: underline; color: blue; }
+.my-p {
+  margin: 0 0 0.8em 0;
+}
+.my-h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.my-link {
+  text-decoration: underline;
+  color: blue;
+}
 
 .fill-neutral-50 {
   fill: rgba(255, 195, 0, 0.02) !important;
 }
-

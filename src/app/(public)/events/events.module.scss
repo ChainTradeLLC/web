@@ -1,10 +1,10 @@
 .events {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  background: #080808;
+  // padding-right: 5%;
+  // padding-left: 5%;
+  .events_header {
     background: #080808;
-    // padding-right: 5%;
-    // padding-left: 5%;
-    .events_header {
-        background: #080808;
-    }
+  }
 }

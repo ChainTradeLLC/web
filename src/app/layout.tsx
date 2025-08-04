@@ -1,15 +1,15 @@
-import type { Metadata } from 'next';
-import AuthProvider from '@/src/app/providers/auth';
+import type { Metadata } from "next";
+import AuthProvider from "@/src/app/providers/auth";
 
 export const metadata: Metadata = {
-  title: 'ChainTrade Blockchain',
+  title: "ChainTrade Blockchain",
   description:
-    'The ecosystem for decentralized, trustless, and permissioned commerce on the blockchain.',
-  keywords: 'ChainTrade, commerce, decentralized, trustless, blockchain',
-    alternates: {
-      canonical: '/',
-    },
-  icons: '/favicon.ico',
+    "The ecosystem for decentralized, trustless, and permissioned commerce on the blockchain.",
+  keywords: "ChainTrade, commerce, decentralized, trustless, blockchain",
+  alternates: {
+    canonical: "/",
+  },
+  icons: "/favicon.ico",
   robots: {
     index: true,
     follow: true,
@@ -25,9 +25,7 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <AuthProvider>
-      {children}
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

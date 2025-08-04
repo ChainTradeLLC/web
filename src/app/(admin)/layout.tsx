@@ -1,7 +1,7 @@
-import type { Metadata } from 'next';
-import '../globals.scss';
-import AuthProvider from '@/src/app/providers/auth';
-import { cn } from '@/src/app/lib/utils';
+import type { Metadata } from "next";
+import "../globals.scss";
+import AuthProvider from "@/src/app/providers/auth";
+import { cn } from "@/src/app/lib/utils";
 
 // export const metadata: Metadata = {
 //   title:
@@ -16,10 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-  <div className="">
-    <AuthProvider>
-    {children}
-    </AuthProvider>
+    <div className="">
+      <AuthProvider>{children}</AuthProvider>
     </div>
   );
 }

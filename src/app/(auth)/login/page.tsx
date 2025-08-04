@@ -1,42 +1,42 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { signIn, useSession } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import styles from './login.module.scss';
-import { Button } from '@/src/components/ui/button';
-import { Checkbox, CheckboxField } from '@/src/components/ui/checkbox';
-import { Field, Label } from '@/src/components/ui/fieldset';
-import { Heading } from '@/src/components/ui/heading';
-import { Input } from '@/src/components/ui/input';
-import { Strong, Text, TextLink } from '@/src/components/ui/text';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import styles from "./login.module.scss";
+import { Button } from "@/src/components/ui/button";
+import { Checkbox, CheckboxField } from "@/src/components/ui/checkbox";
+import { Field, Label } from "@/src/components/ui/fieldset";
+import { Heading } from "@/src/components/ui/heading";
+import { Input } from "@/src/components/ui/input";
+import { Strong, Text, TextLink } from "@/src/components/ui/text";
+import Image from "next/image";
 
 export default function Login() {
-    const { data: session, status, update } = useSession();
+  const { data: session, status, update } = useSession();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    console.log('Session data:', status);
+    console.log("Session data:", status);
   }, []);
 
   useEffect(() => {
-    if (status === 'authenticated') {
-      router.push('/admin');
+    if (status === "authenticated") {
+      router.push("/admin");
     }
   }, [status, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
-    const result = await signIn('credentials', {
+    const result = await signIn("credentials", {
       redirect: false,
       email,
       password,
@@ -45,57 +45,70 @@ export default function Login() {
     if (result?.error) {
       setError(result.error);
     } else {
-      router.push('/');
+      router.push("/");
     }
   };
 
   return (
     <>
-    <form onSubmit={handleSubmit} className="grid w-full max-w-sm grid-cols-1 gap-8">
-      <Link href="/" className={`${styles.logo}`}>
-                  <Image
-                    alt="ChainTrade Logo"
-                    src="/main-2.png"
-                    fill
-                    style={{
-                      objectFit: 'cover',
-                  }}
-                    className=""
-                  />
-                </Link>
-      <Heading>Sign in to your account</Heading>
-      {error && <p className="text-red-500 mb-4">{error}</p>}
-      <Field>
-        <Label>Email</Label>
-        <Input type="email" value={email}
-            onChange={(e) => setEmail(e.target.value)} name="email" required />
-      </Field>
-      <Field>
-        <Label>Password</Label>
-        <Input type="password" value={password}
-            onChange={(e) => setPassword(e.target.value)} name="password" required />
-      </Field>
-      <div className="flex items-center justify-between">
-        <CheckboxField>
-          <Checkbox name="remember" />
-          <Label>Remember me</Label>
-        </CheckboxField>
+      <form
+        onSubmit={handleSubmit}
+        className="grid w-full max-w-sm grid-cols-1 gap-8"
+      >
+        <Link href="/" className={`${styles.logo}`}>
+          <Image
+            alt="ChainTrade Logo"
+            src="/main-2.png"
+            fill
+            style={{
+              objectFit: "cover",
+            }}
+            className=""
+          />
+        </Link>
+        <Heading>Sign in to your account</Heading>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
+        <Field>
+          <Label>Email</Label>
+          <Input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            required
+          />
+        </Field>
+        <Field>
+          <Label>Password</Label>
+          <Input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            name="password"
+            required
+          />
+        </Field>
+        <div className="flex items-center justify-between">
+          <CheckboxField>
+            <Checkbox name="remember" />
+            <Label>Remember me</Label>
+          </CheckboxField>
+          <Text>
+            <TextLink href="#">
+              <Strong>Forgot password?</Strong>
+            </TextLink>
+          </Text>
+        </div>
+        <Button type="submit" className="w-full">
+          Login
+        </Button>
         <Text>
-          <TextLink href="#">
-            <Strong>Forgot password?</Strong>
+          Don’t have an account?{" "}
+          <TextLink href="/register">
+            <Strong>Sign up</Strong>
           </TextLink>
         </Text>
-      </div>
-      <Button type="submit" className="w-full">
-        Login
-      </Button>
-      <Text>
-        Don’t have an account?{' '}
-        <TextLink href="/register">
-          <Strong>Sign up</Strong>
-        </TextLink>
-      </Text>
-    </form>
-  </>
+      </form>
+    </>
   );
 }

@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { Avatar } from '@/src/components/ui/avatar'
+import { Avatar } from "@/src/components/ui/avatar";
 import {
   Dropdown,
   DropdownButton,
@@ -8,8 +8,13 @@ import {
   DropdownItem,
   DropdownLabel,
   DropdownMenu,
-} from '@/src/components/ui/dropdown'
-import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/src/components/ui/navbar'
+} from "@/src/components/ui/dropdown";
+import {
+  Navbar,
+  NavbarItem,
+  NavbarSection,
+  NavbarSpacer,
+} from "@/src/components/ui/navbar";
 import {
   Sidebar,
   SidebarBody,
@@ -20,9 +25,9 @@ import {
   SidebarLabel,
   SidebarSection,
   SidebarSpacer,
-} from '@/src/components/ui/sidebar'
-import { SidebarLayout } from '@/src/components/ui/sidebar-layout'
-import { getEvents } from './data'
+} from "@/src/components/ui/sidebar";
+import { SidebarLayout } from "@/src/components/ui/sidebar-layout";
+import { getEvents } from "./data";
 import {
   ArrowRightStartOnRectangleIcon,
   ChevronDownIcon,
@@ -32,7 +37,7 @@ import {
   PlusIcon,
   ShieldCheckIcon,
   UserCircleIcon,
-} from '@heroicons/react/16/solid'
+} from "@heroicons/react/16/solid";
 import {
   Cog6ToothIcon,
   HomeIcon,
@@ -40,12 +45,15 @@ import {
   SparklesIcon,
   Square2StackIcon,
   TicketIcon,
-} from '@heroicons/react/20/solid'
-import { usePathname } from 'next/navigation'
-import { signOut, useSession } from 'next-auth/react'
+} from "@heroicons/react/20/solid";
+import { usePathname } from "next/navigation";
+import { signOut, useSession } from "next-auth/react";
 
-function AccountDropdownMenu({ anchor }: { anchor: 'top start' | 'bottom end' }) {
-
+function AccountDropdownMenu({
+  anchor,
+}: {
+  anchor: "top start" | "bottom end";
+}) {
   return (
     <DropdownMenu className="min-w-64" anchor={anchor}>
       <DropdownItem href="#">
@@ -67,18 +75,18 @@ function AccountDropdownMenu({ anchor }: { anchor: 'top start' | 'bottom end' })
         <DropdownLabel>Sign out</DropdownLabel>
       </DropdownItem>
     </DropdownMenu>
-  )
+  );
 }
 
 export function ApplicationLayout({
   events,
   children,
 }: {
-  events: Awaited<ReturnType<typeof getEvents>>
-  children: React.ReactNode
+  events: Awaited<ReturnType<typeof getEvents>>;
+  children: React.ReactNode;
 }) {
-  let pathname = usePathname()
-  const { data: session } = useSession()
+  let pathname = usePathname();
+  const { data: session } = useSession();
 
   return (
     <SidebarLayout
@@ -104,7 +112,10 @@ export function ApplicationLayout({
                 <SidebarLabel>ChainTrade</SidebarLabel>
                 <ChevronDownIcon />
               </DropdownButton>
-              <DropdownMenu className="min-w-80 lg:min-w-64" anchor="bottom start">
+              <DropdownMenu
+                className="min-w-80 lg:min-w-64"
+                anchor="bottom start"
+              >
                 {/* <DropdownItem href="/settings">
                   <Cog8ToothIcon />
                   <DropdownLabel>Settings</DropdownLabel>
@@ -129,15 +140,21 @@ export function ApplicationLayout({
 
           <SidebarBody>
             <SidebarSection>
-              <SidebarItem href="/admin" current={pathname === '/admin'}>
+              <SidebarItem href="/admin" current={pathname === "/admin"}>
                 <HomeIcon />
                 <SidebarLabel>Home</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="/admin/event" current={pathname.startsWith('/admin/event')}>
+              <SidebarItem
+                href="/admin/event"
+                current={pathname.startsWith("/admin/event")}
+              >
                 <Square2StackIcon />
                 <SidebarLabel>Events</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="/admin/blog" current={pathname.startsWith('/admin/blog')}>
+              <SidebarItem
+                href="/admin/blog"
+                current={pathname.startsWith("/admin/blog")}
+              >
                 <TicketIcon />
                 <SidebarLabel>Blog</SidebarLabel>
               </SidebarItem>
@@ -176,9 +193,11 @@ export function ApplicationLayout({
                 <span className="flex min-w-0 items-center gap-3">
                   <Avatar src="/icon-2.jpg" className="size-10" square alt="" />
                   <span className="min-w-0">
-                    <span className="block truncate text-sm/5 font-medium text-zinc-950 dark:text-white">{session!?.user!?.name}</span>
+                    <span className="block truncate text-sm/5 font-medium text-zinc-950 dark:text-white">
+                      {session!?.user!?.name}
+                    </span>
                     <span className="block truncate text-xs/5 font-normal text-zinc-500 dark:text-zinc-400">
-                    {session!?.user!?.email}
+                      {session!?.user!?.email}
                     </span>
                   </span>
                 </span>
@@ -192,5 +211,5 @@ export function ApplicationLayout({
     >
       {children}
     </SidebarLayout>
-  )
+  );
 }

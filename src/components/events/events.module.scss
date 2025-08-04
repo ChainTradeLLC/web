@@ -1,69 +1,76 @@
 .status {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &.animatee {
-        .icon {
-            svg {
-                .path_1 {
-                    animation: draw_animation .65s ease-in 1 forwards .1s, fill_animation .6s ease-in forwards .4s;
-                }
-                .path_2 {
-                    animation: draw_animation .65s ease-in 1 forwards .1s, fill_animation .6s ease-in forwards .4s;
-                }
-                .path_3 {
-                    animation: draw_animation .65s ease-in 1 forwards .1s, fill_animation .6s ease-in forwards .4s;
-                }
-                .path_4 {
-                    animation: draw_animation .65s ease-in 1 forwards .1s, fill_animation .6s ease-in forwards .4s;
-                }
-            }
-        }
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &.animatee {
     .icon {
-        svg {
-            width: 200px;
-            height: 200px;
-            stroke: #ffc300;
-            fill: none;
-            .path_1 {
-                stroke-dashoffset: 80.66411590576172;
-                stroke-dasharray: 80.66411590576172;
-            }
-            .path_2 {
-                stroke-dashoffset: 124.49390411376953;
-                stroke-dasharray: 124.49390411376953;
-            }
-            .path_3 {
-                stroke-dashoffset: 162.60671997070312;
-                stroke-dasharray: 162.60671997070312;
-            }
-            .path_4 {
-                stroke-dashoffset: 192.00921630859375;
-                stroke-dasharray: 192.00921630859375;
-            }
+      svg {
+        .path_1 {
+          animation:
+            draw_animation 0.65s ease-in 1 forwards 0.1s,
+            fill_animation 0.6s ease-in forwards 0.4s;
         }
+        .path_2 {
+          animation:
+            draw_animation 0.65s ease-in 1 forwards 0.1s,
+            fill_animation 0.6s ease-in forwards 0.4s;
+        }
+        .path_3 {
+          animation:
+            draw_animation 0.65s ease-in 1 forwards 0.1s,
+            fill_animation 0.6s ease-in forwards 0.4s;
+        }
+        .path_4 {
+          animation:
+            draw_animation 0.65s ease-in 1 forwards 0.1s,
+            fill_animation 0.6s ease-in forwards 0.4s;
+        }
+      }
     }
-    p {
-        color: #F5F5F5;
-        opacity: 0.8;
-        font-size: 18px;
-        text-transform: capitalize;
-        margin-bottom: 1rem;
-        padding: 0 1rem;
+  }
+  .icon {
+    svg {
+      width: 200px;
+      height: 200px;
+      stroke: #ffc300;
+      fill: none;
+      .path_1 {
+        stroke-dashoffset: 80.66411590576172;
+        stroke-dasharray: 80.66411590576172;
+      }
+      .path_2 {
+        stroke-dashoffset: 124.49390411376953;
+        stroke-dasharray: 124.49390411376953;
+      }
+      .path_3 {
+        stroke-dashoffset: 162.60671997070312;
+        stroke-dasharray: 162.60671997070312;
+      }
+      .path_4 {
+        stroke-dashoffset: 192.00921630859375;
+        stroke-dasharray: 192.00921630859375;
+      }
     }
+  }
+  p {
+    color: #f5f5f5;
+    opacity: 0.8;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+  }
 }
 
-
 @keyframes draw_animation {
-    to {
-      stroke-dashoffset: 0;
-    }
+  to {
+    stroke-dashoffset: 0;
   }
+}
 
-  @keyframes fill_animation {
-    to {
-      fill: #ffc300;
-    }
+@keyframes fill_animation {
+  to {
+    fill: #ffc300;
   }
+}

@@ -1,18 +1,25 @@
-import { Stat } from './stat'
-import { Avatar } from '@/src/components/ui/avatar'
-import { Heading, Subheading } from '@/src/components/ui/heading'
-import { Select } from '@/src/components/ui/select'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/src/components/ui/table'
-import { getRecentOrders } from './data'
-import { authOptions } from '@/src/app/lib/authOptions';
-import { getServerSession } from 'next-auth'
+import { Stat } from "./stat";
+import { Avatar } from "@/src/components/ui/avatar";
+import { Heading, Subheading } from "@/src/components/ui/heading";
+import { Select } from "@/src/components/ui/select";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/src/components/ui/table";
+import { getRecentOrders } from "./data";
+import { authOptions } from "@/src/app/lib/authOptions";
+import { getServerSession } from "next-auth";
 
 async function Admin() {
   const session = await getServerSession(authOptions);
 
   return (
     <div>
-        <Heading>Good afternoon, {session?.user?.name}</Heading>
+      <Heading>Good afternoon, {session?.user?.name}</Heading>
       <div className="mt-8 flex items-end justify-between">
         <Subheading>Overview</Subheading>
         <div>

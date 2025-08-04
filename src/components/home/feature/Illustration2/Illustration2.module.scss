@@ -1,0 +1,102 @@
+.illustration {
+  padding: 20px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+  }
+
+  &::before {
+    background: rgba(40, 40, 40, 0.7);
+    box-shadow:
+      inset 2px 4px 16px 0px rgba(248, 248, 248, 0.06),
+      0px 24px 24px -16px rgba(5, 5, 5, 0.09),
+      0px 6px 13px 0px rgba(5, 5, 5, 0.1),
+      0px 6px 4px -4px rgba(5, 5, 5, 0.1),
+      0px 5px 1.5px -4px rgba(5, 5, 5, 0.25);
+    backdrop-filter: blur(50px);
+  }
+
+  &::after {
+    border: 1.5px solid rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+    mask-image: linear-gradient(160deg, black, transparent 50%);
+  }
+  .inner {
+    position: relative;
+    z-index: 2;
+    padding: 12px;
+    height: 400px;
+    width: 100%;
+    .image {
+      opacity: 0.5;
+    }
+  }
+}
+
+/* Small devices and up (sm-up) */
+@media (min-width: 320px) and (max-width: 575px) {
+  .illustration {
+    padding: calc(20px / 100 * 45) !important;
+    &::before,
+    &::after {
+      border-radius: calc(32px / 100 * 45) !important;
+    }
+    .inner {
+      padding: calc(12px / 100 * 45) !important;
+      height: calc(400px / 100 * 45) !important;
+    }
+  }
+}
+
+/* Medium devices and up (md-up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .illustration {
+    padding: calc(20px / 100 * 55) !important;
+    &::before,
+    &::after {
+      border-radius: calc(32px / 100 * 55) !important;
+    }
+    .inner {
+      padding: calc(12px / 100 * 55) !important;
+      height: calc(400px / 100 * 55) !important;
+    }
+  }
+}
+
+/* Large devices and up (lg-up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .illustration {
+    padding: calc(20px / 100 * 65) !important;
+    &::before,
+    &::after {
+      border-radius: calc(32px / 100 * 65) !important;
+    }
+    .inner {
+      padding: calc(12px / 100 * 65) !important;
+      height: calc(400px / 100 * 65) !important;
+    }
+  }
+}
+
+/* Extra large devices and up (xl-up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .illustration {
+    padding: calc(20px / 100 * 85) !important;
+    &::before,
+    &::after {
+      border-radius: calc(32px / 100 * 85) !important;
+    }
+    .inner {
+      padding: calc(12px / 100 * 85) !important;
+      height: calc(400px / 100 * 85) !important;
+    }
+  }
+}
+
+/* Extra large devices and up (xl-up) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  /* Your styles here */
+}

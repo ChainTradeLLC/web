@@ -1,24 +1,28 @@
-import { AuthOptions } from 'next-auth';
-import CredentialsProvider from 'next-auth/providers/credentials';
-import { PrismaAdapter } from '@auth/prisma-adapter';
-import prisma from '@/src/app/lib/prisma';
-import { compare } from 'bcrypt';
+import { AuthOptions } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import prisma from "@/src/app/lib/prisma";
+import { compare } from "bcrypt";
 
 export const authOptions: AuthOptions = {
   adapter: PrismaAdapter(prisma),
   session: {
-    strategy: 'jwt',
+    strategy: "jwt",
   },
   providers: [
     CredentialsProvider({
-      name: 'Credentials',
+      name: "Credentials",
       credentials: {
-        email: { label: 'Email', type: 'email', placeholder: 'hello@example.com' },
-        password: { label: 'Password', type: 'password' },
+        email: {
+          label: "Email",
+          type: "email",
+          placeholder: "hello@example.com",
+        },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error('Email and password are required');
+          throw new Error("Email and password are required");
         }
 
         const user = await prisma.user.findUnique({
@@ -26,13 +30,16 @@ export const authOptions: AuthOptions = {
         });
 
         if (!user || !user.password) {
-          throw new Error('Invalid email or password');
+          throw new Error("Invalid email or password");
         }
 
-        const isPasswordValid = await compare(credentials.password, user.password);
+        const isPasswordValid = await compare(
+          credentials.password,
+          user.password,
+        );
 
         if (!isPasswordValid) {
-          throw new Error('Invalid email or password');
+          throw new Error("Invalid email or password");
         }
 
         return {
@@ -45,9 +52,9 @@ export const authOptions: AuthOptions = {
     }),
   ],
   pages: {
-    signIn: '/login',
-    signOut: '/logout',
-    error: '/auth/error',
+    signIn: "/login",
+    signOut: "/logout",
+    error: "/auth/error",
   },
   callbacks: {
     async jwt({ token, user }: { token: any; user?: any }) {

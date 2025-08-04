@@ -1,0 +1,244 @@
+.token {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .layer_1 {
+    z-index: -100;
+  }
+  .token_box {
+    z-index: -10;
+    height: 70%;
+    width: 100%;
+    // background: red;
+    position: absolute;
+    bottom: 0;
+    .token_showcase {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-top: -40px;
+        opacity: 0.5;
+      }
+    }
+  }
+  .token_info {
+    padding: 7% 9%;
+    width: 60%;
+    h2 {
+      font-size: 54px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      text-transform: capitalize;
+      background-image: linear-gradient(
+        93deg,
+        rgba(248, 248, 248, 0.9),
+        rgba(248, 248, 248, 0.5)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      span {
+        text-transform: uppercase;
+      }
+    }
+    p {
+      color: rgba(248, 248, 248, 0.6);
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+    button {
+      margin-top: 40px;
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      padding: 0 56px;
+      overflow: hidden;
+      border-radius: 56px;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.8;
+      text-transform: capitalize;
+      color: rgba(248, 248, 248, 0.8);
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 56px;
+        cursor: pointer;
+      }
+      &::before {
+        background: rgba(46, 139, 87, 0.7);
+        box-shadow: inset 2px 4px 16px 0px rgba(51, 51, 51, 0.06);
+        backdrop-filter: blur(50px);
+      }
+      &::after {
+        z-index: 2;
+        border: 1px solid rgba(51, 51, 51, 0.25);
+        mask-image: linear-gradient(170deg, black, transparent 50%);
+        pointer-events: none;
+        opacity: 0.25;
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+        .circle {
+          &::before {
+            opacity: 0;
+          }
+          &::after {
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+      .title {
+        position: relative;
+        z-index: 4;
+      }
+
+      .circle {
+        // Positioning
+        position: absolute;
+        top: calc(50% - 140px);
+        left: calc(50% - 140px);
+        z-index: 3;
+        cursor: pointer;
+
+        // Box Model
+        width: 250px;
+        height: 250px;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        &::before {
+          background: conic-gradient(
+            from 180deg at 50% 50%,
+            rgba(0, 0, 0, 0.01) 180deg,
+            rgba(0, 0, 0, 0.05) 360deg
+          );
+          filter: blur(15px);
+          animation: button-circle 3.6s linear infinite;
+          transition: opacity 0.5s;
+        }
+
+        &::after {
+          inset: 50px;
+          background: rgba(51, 51, 51, 0.12);
+          opacity: 0;
+          filter: blur(5px);
+          transform: scale(0.5);
+          transition: all 1s;
+          mask-image: radial-gradient(
+            50% 50% at 50% 50%,
+            black,
+            rgba(0, 0, 0, 0)
+          );
+        }
+      }
+    }
+  }
+}
+
+@keyframes button-circle {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+  25% {
+    transform: translateX(-30px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(0) rotate(180deg);
+  }
+  75% {
+    transform: translateX(30px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+/* Small devices and up (sm-up) */
+@media (min-width: 320px) and (max-width: 575px) {
+  .token {
+    height: 80vh !important;
+  }
+  .token_info {
+    padding: 25% 8% 10% 8% !important;
+    width: 100% !important;
+    h2 {
+      font-size: calc(54px / 100 * 80) !important;
+      line-height: calc(1.2 / 100 * 100) !important;
+      margin-bottom: 14px !important;
+    }
+    p {
+      font-size: calc(20px / 100 * 85) !important;
+      line-height: calc(1.6 / 100 * 100) !important;
+    }
+    button {
+      height: calc(80px / 100 * 75) !important;
+      padding: 0 calc(56px / 100 * 75) !important;
+      font-size: calc(20px / 100 * 75) !important;
+      border-radius: calc(56px / 100 * 75) !important;
+      .circle {
+        width: calc(250px / 100 * 75) !important;
+        height: calc(250px / 100 * 75) !important;
+        &::before {
+          inset: calc(50px / 100 * 75) !important;
+        }
+        &::after {
+          inset: calc(50px / 100 * 75) !important;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices and up (md-up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .token {
+    height: 80vh !important;
+  }
+  .token_info {
+    padding: 10% 8% !important;
+    width: 85% !important;
+  }
+}
+
+/* Large devices and up (lg-up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .token_info {
+    padding: 12% 13% !important;
+    width: 75% !important;
+  }
+}
+
+/* Extra large devices and up (xl-up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .token_info {
+    padding: 10% 13% !important;
+    width: 70% !important;
+  }
+}
+
+/* Extra large devices and up (xl-up) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  /* Your styles here */
+}

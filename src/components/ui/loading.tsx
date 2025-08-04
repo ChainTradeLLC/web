@@ -1,56 +1,56 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 function LoadingRipple() {
-    const animation = {
-        transform: ["scale(0)", "scale(1)"],
-        opacity: [1, 0],
-    }
+  const animation = {
+    transform: ["scale(0)", "scale(1)"],
+    opacity: [1, 0],
+  };
 
-    const transition = {
-        duration: 2,
-        repeat: Infinity,
-        ease: "easeOut",
-    }
+  const transition = {
+    duration: 2,
+    repeat: Infinity,
+    ease: "easeOut",
+  };
 
-    return (
-        <div className="container">
-            <div className="ripple-container">
-                <motion.div
-                    className="ripple"
-                    animate={animation}
-                    transition={transition}
-                />
-                <motion.div
-                    className="ripple"
-                    animate={animation}
-                    transition={{
-                        ...transition,
-                        delay: 0.5,
-                    }}
-                />
-                <motion.div
-                    className="ripple"
-                    animate={animation}
-                    transition={{
-                        ...transition,
-                        delay: 1,
-                    }}
-                />
-            </div>
-            <StyleSheet />
-        </div>
-    )
+  return (
+    <div className="container">
+      <div className="ripple-container">
+        <motion.div
+          className="ripple"
+          animate={animation}
+          transition={transition}
+        />
+        <motion.div
+          className="ripple"
+          animate={animation}
+          transition={{
+            ...transition,
+            delay: 0.5,
+          }}
+        />
+        <motion.div
+          className="ripple"
+          animate={animation}
+          transition={{
+            ...transition,
+            delay: 1,
+          }}
+        />
+      </div>
+      <StyleSheet />
+    </div>
+  );
 }
 
 /**
  * ==============   Styles   ================
  */
 function StyleSheet() {
-    return (
-        <style>
-            {`
+  return (
+    <style>
+      {`
             .container {
                 display: flex;
                 justify-content: center;
@@ -77,8 +77,8 @@ function StyleSheet() {
                 opacity: 0;
             }
             `}
-        </style>
-    )
+    </style>
+  );
 }
 
-export default LoadingRipple
+export default LoadingRipple;

@@ -7,10 +7,10 @@ const nextConfig = {
   //   locales: ['en', 'fr', 'es'],
   //   defaultLocale: 'en',
   // },
-  output: 'standalone',
+  output: "standalone",
   // compress: false,
   reactStrictMode: false,
-  swcMinify: true,
+  // swcMinify: true,
   // assetPrefix: './',
   // images: {
   //   // domains:["lh3.googleusercontent.com","firebasestorage.googleapis.com", "avatars.githubusercontent.com"],

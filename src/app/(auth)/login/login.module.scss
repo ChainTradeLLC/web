@@ -1,13 +1,13 @@
 .logo {
-    width: calc(2559px / 100 * 9);
-    height: calc(519px / 100 * 9);
-    position: relative;
-    @media (max-width: 768px) {
-        width: calc(2559px / 100 * 8);
-        height: calc(519px / 100 * 8);
-    }
-    @media (max-width: 480px) {
-        width: calc(2559px / 100 * 7);
-        height: calc(519px / 100 * 7);
-    }
+  width: calc(2559px / 100 * 9);
+  height: calc(519px / 100 * 9);
+  position: relative;
+  @media (max-width: 768px) {
+    width: calc(2559px / 100 * 8);
+    height: calc(519px / 100 * 8);
+  }
+  @media (max-width: 480px) {
+    width: calc(2559px / 100 * 7);
+    height: calc(519px / 100 * 7);
+  }
 }
