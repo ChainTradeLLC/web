@@ -17,7 +17,8 @@ export function Landing() {
   const dashboardRef = useRef<HTMLDivElement>(null);
   const primaryRef = useRef<HTMLHeadingElement>(null);
   const secondaryRef = useRef<HTMLParagraphElement>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonReff = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const root = landingRef.current;
@@ -35,6 +36,7 @@ export function Landing() {
           primaryRef.current.style.visibility = "visible";
           secondaryRef.current.style.visibility = "visible";
           buttonRef.current.style.visibility = "visible";
+          buttonReff.current.style.visibility = "visible";
           dashboardRef.current.style.visibility = "visible";
           // "decay" | "spring" | "keyframes" | "tween" | "inertia"
 
@@ -62,6 +64,12 @@ export function Landing() {
             buttonRef.current!,
             { opacity: [0, 1], y: [10, 0] },
             { delay: 0.4, duration: 0.5 },
+          );
+
+          animate(
+            buttonReff.current!,
+            { opacity: [0, 1], y: [10, 0] },
+            { delay: 0.43, duration: 0.5 },
           );
 
           animate(
@@ -166,16 +174,17 @@ export function Landing() {
             </p>
             <div
               className={`${styles.btn_group} mt-14 md:mt-12 sm:mt-10 xs:mt-8 flex items-center justify-center gap-x-6 transform-gpu`}
-              ref={buttonRef}
             >
               <button
                 className={`${styles.landing_btn} ${Nexa_Bold.className}`}
+                ref={buttonRef}
               >
                 <span className={styles.title}>Launch App</span>
                 <span className={styles.circle}></span>
               </button>
               <button
                 className={`${styles.landing_btn_dark} ${Nexa_Bold.className}`}
+                ref={buttonReff}
               >
                 <span className={styles.title}>Explore Docs</span>
                 <span className={styles.circle}></span>
