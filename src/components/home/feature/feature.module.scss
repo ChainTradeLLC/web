@@ -1,22 +1,251 @@
 .feature {
-    position: relative;
+  position: relative;
+  width: 100%;
+  // margin-bottom: 160px;
+  padding: 0 5%;
+  // visibility: hidden;
+  padding-bottom: 5%;
+  overflow: hidden;
+  .container {
     width: 100%;
-    background: #080808;
-    visibility: hidden;
-    .title {
-        color: #ffc300;
+    .head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 10px;
+      .check {
+        position: relative;
+        height: 154px;
+        width: 154px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 40px;
+        .image {
+          opacity: 0.6;
+        }
+        .circle {
+          position: absolute;
+          //   top: 61px;
+          left: 50%;
+          width: 240px;
+          height: 240px;
+          border: 1.5px solid rgba(204, 156, 0, 0.044);
+          border-radius: 50%;
+          transform: translateX(-50%);
+          animation: rotate 50s linear infinite;
+          .dot {
+            position: absolute;
+            right: 5.3%;
+            bottom: 24.5%;
+            z-index: 1;
+            width: 4px;
+            height: 4px;
+            background: rgba(230, 176, 0, 0.6);
+            border-radius: 50%;
+            box-shadow: 0px 0px 12px rgba(230, 176, 0, 0.6);
+          }
+        }
+      }
+      .title {
+        margin: 20px 0 40px 0;
+        width: 60%;
+        font-size: 48px;
+        line-height: 1.15;
+        font-weight: 700;
+        letter-spacing: -0.02em;
         text-transform: uppercase;
-        margin-bottom: 6rem;
-        // opacity: 0.8;
-        list-style: 120%;
-        // opacity: 0;
-        visibility: hidden;
+        background-image: linear-gradient(
+          93deg,
+          rgba(204, 156, 0, 0.9),
+          rgba(204, 156, 0, 0.5)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
-    .box {
-        background: #121212;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+/* Small devices and up (sm-up) */
+@media (min-width: 320px) and (max-width: 575px) {
+  .head {
+    margin-bottom: 15px !important;
+    margin-top: 50px !important;
+    .check {
+      height: calc(154px / 100 * 50) !important;
+      width: calc(154px / 100 * 50) !important;
+      margin-bottom: calc(40px / 100 * 50) !important;
+      .circle {
+        left: calc(50% / 100 * 100) !important;
+        width: calc(240px / 100 * 50) !important;
+        height: calc(240px / 100 * 50) !important;
+        border: calc(1.5px / 100 * 100) solid rgba(204, 156, 0, 0.044) !important;
+        border-radius: calc(50% / 100 * 100) !important;
+        .dot {
+          right: calc(5.3% / 100 * 40) !important;
+          bottom: calc(24.5% / 100 * 40) !important;
+          width: calc(4px / 100 * 100) !important;
+          height: calc(4px / 100 * 100) !important;
+          border-radius: calc(50% / 100 * 100) !important;
+          box-shadow: 0px 0px calc(12px / 100 * 50) rgba(230, 176, 0, 0.6) !important;
+        }
+      }
     }
-    .bord {
-        border-color: #393939;
-        background-color: #525252;
+    .title {
+      width: 95% !important;
+      margin: calc(20px / 100 * 50) 0 calc(40px / 100 * 50) 0 !important;
+      font-size: calc(48px / 100 * 50) !important;
+      line-height: 1.15 calc(1.15 / 100 * 50) !important;
     }
+  }
+}
+
+/* Medium devices and up (md-up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .head {
+    margin-bottom: 20px !important;
+    margin-top: 60px !important;
+    .check {
+      height: calc(154px / 100 * 60) !important;
+      width: calc(154px / 100 * 60) !important;
+      margin-bottom: calc(40px / 100 * 60) !important;
+      .circle {
+        left: calc(50% / 100 * 100) !important;
+        width: calc(240px / 100 * 60) !important;
+        height: calc(240px / 100 * 60) !important;
+        border: calc(1.5px / 100 * 100) solid rgba(204, 156, 0, 0.044) !important;
+        border-radius: calc(50% / 100 * 100) !important;
+        .dot {
+          right: calc(5.3% / 100 * 40) !important;
+          bottom: calc(24.5% / 100 * 40) !important;
+          width: calc(4px / 100 * 100) !important;
+          height: calc(4px / 100 * 100) !important;
+          border-radius: calc(50% / 100 * 100) !important;
+          box-shadow: 0px 0px calc(12px / 100 * 60) rgba(230, 176, 0, 0.6) !important;
+        }
+      }
+    }
+    .title {
+      width: 95% !important;
+      margin: calc(20px / 100 * 60) 0 calc(40px / 100 * 60) 0 !important;
+      font-size: calc(48px / 100 * 60) !important;
+      line-height: 1.15 calc(1.15 / 100 * 60) !important;
+    }
+  }
+}
+
+/* Large devices and up (lg-up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .head {
+    margin-bottom: calc(10px / 100 * 70) !important;
+    margin-top: 80px !important;
+    .check {
+      height: calc(154px / 100 * 70) !important;
+      width: calc(154px / 100 * 70) !important;
+      margin-bottom: calc(40px / 100 * 70) !important;
+      .circle {
+        left: calc(50% / 100 * 100) !important;
+        width: calc(240px / 100 * 70) !important;
+        height: calc(240px / 100 * 70) !important;
+        border: calc(1.5px / 100 * 70) solid rgba(204, 156, 0, 0.044) !important;
+        border-radius: calc(50% / 100 * 100) !important;
+        .dot {
+          right: calc(5.3% / 100 * 70) !important;
+          bottom: calc(24.5% / 100 * 70) !important;
+          width: calc(4px / 100 * 70) !important;
+          height: calc(4px / 100 * 70) !important;
+          border-radius: calc(50% / 100 * 70) !important;
+          box-shadow: 0px 0px calc(12px / 100 * 70) rgba(230, 176, 0, 0.6) !important;
+        }
+      }
+    }
+    .title {
+      width: 85% !important;
+      margin: calc(20px / 100 * 70) 0 calc(40px / 100 * 70) 0 !important;
+      font-size: calc(48px / 100 * 70) !important;
+      line-height: 1.15 calc(1.15 / 100 * 70) !important;
+    }
+  }
+}
+
+/* Extra large devices and up (xl-up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .head {
+    margin-bottom: calc(10px / 100 * 85) !important;
+    margin-top: 80px !important;
+    .check {
+      height: calc(154px / 100 * 85) !important;
+      width: calc(154px / 100 * 85) !important;
+      margin-bottom: calc(40px / 100 * 85) !important;
+      .circle {
+        left: calc(50% / 100 * 100) !important;
+        width: calc(240px / 100 * 85) !important;
+        height: calc(240px / 100 * 85) !important;
+        border: calc(1.5px / 100 * 85) solid rgba(204, 156, 0, 0.044) !important;
+        border-radius: calc(50% / 100 * 100) !important;
+        .dot {
+          right: calc(5.3% / 100 * 85) !important;
+          bottom: calc(24.5% / 100 * 85) !important;
+          width: calc(4px / 100 * 85) !important;
+          height: calc(4px / 100 * 85) !important;
+          border-radius: calc(50% / 100 * 85) !important;
+          box-shadow: 0px 0px calc(12px / 100 * 85) rgba(230, 176, 0, 0.6) !important;
+        }
+      }
+    }
+    .title {
+      width: 75% !important;
+      margin: calc(20px / 100 * 85) 0 calc(40px / 100 * 85) 0 !important;
+      font-size: calc(48px / 100 * 85) !important;
+      line-height: 1.15 calc(1.15 / 100 * 85) !important;
+    }
+  }
+}
+
+/* Extra large devices and up (xl-up) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .head {
+    margin-bottom: calc(10px / 100 * 95) !important;
+    margin-top: 80px !important;
+    .check {
+      height: calc(154px / 100 * 95) !important;
+      width: calc(154px / 100 * 95) !important;
+      margin-bottom: calc(40px / 100 * 95) !important;
+      .circle {
+        left: calc(50% / 100 * 100) !important;
+        width: calc(240px / 100 * 95) !important;
+        height: calc(240px / 100 * 95) !important;
+        border: calc(1.5px / 100 * 95) solid rgba(204, 156, 0, 0.044) !important;
+        border-radius: calc(50% / 100 * 95) !important;
+        .dot {
+          right: calc(5.3% / 100 * 95) !important;
+          bottom: calc(24.5% / 100 * 95) !important;
+          width: calc(4px / 100 * 95) !important;
+          height: calc(4px / 100 * 95) !important;
+          border-radius: calc(50% / 100 * 95) !important;
+          box-shadow: 0px 0px calc(12px / 100 * 95) rgba(230, 176, 0, 0.6) !important;
+        }
+      }
+    }
+    .title {
+      width: 65% !important;
+      margin: calc(20px / 100 * 95) 0 calc(40px / 100 * 95) 0 !important;
+      font-size: calc(48px / 100 * 95) !important;
+      line-height: 1.15 calc(1.15 / 100 * 95) !important;
+    }
+  }
 }
