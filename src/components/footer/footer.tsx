@@ -18,7 +18,7 @@ const navigation = {
     { name: "Wallet", href: "#" },
   ],
   publications: [
-    { name: "Blog", href: "#" },
+    { name: "Publications", href: "/publications" },
     { name: "Media Kits", href: "#" },
   ],
   community: [
@@ -138,7 +138,7 @@ export default function Footer() {
               <Link href="#">Whitepaper</Link>
             </li>
             <li>
-              <Link href="#">Blog</Link>
+              <Link href="/publications">Publications</Link>
             </li>
             <li>
               <Link href="#">Explorer</Link>

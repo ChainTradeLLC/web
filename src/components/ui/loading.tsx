@@ -20,11 +20,13 @@ function LoadingRipple() {
         <motion.div
           className="ripple"
           animate={animation}
+          //@ts-ignore
           transition={transition}
         />
         <motion.div
           className="ripple"
           animate={animation}
+          //@ts-ignore
           transition={{
             ...transition,
             delay: 0.5,
@@ -33,6 +35,7 @@ function LoadingRipple() {
         <motion.div
           className="ripple"
           animate={animation}
+          //@ts-ignore
           transition={{
             ...transition,
             delay: 1,

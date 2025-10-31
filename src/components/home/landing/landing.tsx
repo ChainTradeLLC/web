@@ -75,7 +75,7 @@ export function Landing() {
           animate(
             dashboardRef.current!,
             { opacity: [0, 1], y: [20, 0], scale: [0.9, 1] },
-            { delay: 0.6, duration: 0.5},
+            { delay: 0.6, duration: 0.5 },
           );
         });
       },
@@ -155,42 +155,41 @@ export function Landing() {
             className="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#FFC300] to-[#333333] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"
           />
         </div>
-          <div className={`${styles.text} text-center`}>
-            <h1
-              className={`${styles.primary_text} ${Mont_Bold.className} tracking-tight text-balance uppercase transform-gpu`}
-              ref={primaryRef}
+        <div className={`${styles.text} text-center`}>
+          <h1
+            className={`${styles.primary_text} ${Mont_Bold.className} tracking-tight text-balance uppercase transform-gpu sm:prose`}
+            ref={primaryRef}
+          >
+            The Decentralized Protocol for global commerce onchain
+          </h1>
+          <p
+            className={`${styles.secondary_text} mt-2 text-pretty text-balance opacity-80 transform-gpu sm:prose`}
+            ref={secondaryRef}
+          >
+            Chaintrade is a layer one blockchain building the trust layer for
+            the future of global commerce, enabling secure, transparent, and
+            efficient trade transactions on the blockchain using smart contracts
+            and decentralized applications.
+          </p>
+          <div
+            className={`${styles.btn_group} mt-14 md:mt-12 sm:mt-10 xs:mt-8 flex items-center justify-center gap-x-6 transform-gpu`}
+          >
+            <button
+              className={`${styles.landing_btn} ${Nexa_Bold.className}`}
+              ref={buttonRef}
             >
-              The Decentralized Protocol for global commerce
-              onchain
-            </h1>
-            <p
-              className={`${styles.secondary_text} mt-2 text-pretty text-balance opacity-80 transform-gpu`}
-              ref={secondaryRef}
+              <span className={styles.title}>Launch App</span>
+              <span className={styles.circle}></span>
+            </button>
+            <button
+              className={`${styles.landing_btn_dark} ${Nexa_Bold.className}`}
+              ref={buttonReff}
             >
-              Chaintrade is a layer one blockchain building the trust layer for
-              the future of global commerce, enabling secure, transparent, and
-              efficient trade transactions on the blockchain using smart
-              contracts and decentralized applications.
-            </p>
-            <div
-              className={`${styles.btn_group} mt-14 md:mt-12 sm:mt-10 xs:mt-8 flex items-center justify-center gap-x-6 transform-gpu`}
-            >
-              <button
-                className={`${styles.landing_btn} ${Nexa_Bold.className}`}
-                ref={buttonRef}
-              >
-                <span className={styles.title}>Launch App</span>
-                <span className={styles.circle}></span>
-              </button>
-              <button
-                className={`${styles.landing_btn_dark} ${Nexa_Bold.className}`}
-                ref={buttonReff}
-              >
-                <span className={styles.title}>Explore Docs</span>
-                <span className={styles.circle}></span>
-              </button>
-            </div>
+              <span className={styles.title}>Explore Docs</span>
+              <span className={styles.circle}></span>
+            </button>
           </div>
+        </div>
         <div className={`${styles.dashboard}`} ref={dashboardRef}>
           <div className={`${styles.dashboard_container} shadow-2xl`}>
             <div className={`${styles.box}`}>

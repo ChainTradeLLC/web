@@ -145,13 +145,15 @@ export default function Header() {
               <Bars3Icon aria-hidden="true" className="size-6" />
             </button>
           </div>
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <PopoverGroup className="hidden lg:flex lg:gap-x-12 cursor-pointer">
             <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold uppercase outline-none">
-                <h5 className={`${styles.txt} opacity-80`}>Resources</h5>
+              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold uppercase outline-none cursor-pointer">
+                <h5 className={`${styles.txt} opacity-80 cursor-pointer`}>
+                  Resources
+                </h5>
                 <ChevronDownIcon
                   aria-hidden="true"
-                  className="size-5 flex-none text-gray-400 opacity-80"
+                  className="size-5 flex-none text-gray-400 opacity-80 cursor-pointer"
                 />
               </PopoverButton>
 
@@ -210,11 +212,13 @@ export default function Header() {
             </a>
 
             <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold uppercase outline-none">
-                <h5 className={`${styles.txt} opacity-80`}>Community</h5>
+              <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold uppercase outline-none cursor-pointer">
+                <h5 className={`${styles.txt} opacity-80 cursor-pointer`}>
+                  Community
+                </h5>
                 <ChevronDownIcon
                   aria-hidden="true"
-                  className="size-5 flex-none text-gray-400 opacity-80"
+                  className="size-5 flex-none text-gray-400 opacity-80 cursor-pointer"
                 />
               </PopoverButton>
 
@@ -242,9 +246,12 @@ export default function Header() {
               </PopoverPanel>
             </Popover>
 
-            <a href="#" className="text-sm/6 font-semibold uppercase">
-              <h5 className={`${styles.txt} opacity-80`}>Blog</h5>
-            </a>
+            <Link
+              href="/publications"
+              className="text-sm/6 font-semibold uppercase"
+            >
+              <h5 className={`${styles.txt} opacity-80`}>Publications</h5>
+            </Link>
           </PopoverGroup>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <button className={`${styles.signup} ${Nexa_Bold.className}`}>
@@ -313,12 +320,12 @@ export default function Header() {
                     >
                       Ecosystem
                     </a>
-                    <a
-                      href="#"
+                    <Link
+                      href="/publications"
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:bg-gray-50"
                     >
-                      Blog
-                    </a>
+                      Publications
+                    </Link>
 
                     {community.map((item) => (
                       <a
