@@ -17,30 +17,31 @@ function stripHtmlAndLimit(htmlString: string | null | undefined): string {
 }
 
 interface PageParams {
-    params: Promise<{ slug: string }>;
-  }
+  params: Promise<{ slug: string }>;
+}
 
-const BASE_URL = process.env.NEXT_PUBLIC_URL || 'http://localhost:8787';
+const BASE_URL = process.env.NEXT_PUBLIC_URL || "http://localhost:8787";
 
 async function getPublicationData(slug: string) {
   try {
     const res = await fetch(`${BASE_URL}/api/publication/${slug}`, {
-        cache: 'no-store'
+      cache: "no-store",
     });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
 
-  return res.json();
-    
+    return res.json();
   } catch (error) {
     // console.error(`Error fetching publication data from ${BASE_URL}/api/publication/${slug}:`, error);
     return null;
   }
 }
 
-export async function generateMetadata({ params }: PageParams): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageParams): Promise<Metadata> {
   const { slug } = await params;
   const publication = await getPublicationData(slug);
 
@@ -85,7 +86,7 @@ export async function generateMetadata({ params }: PageParams): Promise<Metadata
 }
 
 export default async function Page({ params }: PageParams) {
-    const { slug } = await params;
+  const { slug } = await params;
   const publication = await getPublicationData(slug);
 
   if (!publication) return <LoadingRipple />;

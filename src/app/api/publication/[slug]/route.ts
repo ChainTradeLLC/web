@@ -9,13 +9,10 @@ type RouteContext = {
 };
 
 // GET: Fetch a specific publication by slug
-export async function GET(
-  request: Request,
-  context: RouteContext, 
-) {
+export async function GET(request: Request, context: RouteContext) {
   try {
     // Access slug directly from the params object (no 'await' is needed)
-    const { slug } = await context.params; 
+    const { slug } = await context.params;
 
     // Consistency Improvement: Check for required DB environment variable
     const dbName = process.env.MONGODB_DB;
@@ -26,7 +23,7 @@ export async function GET(
 
     const client = await clientPromise;
     const db = client.db(dbName);
-    
+
     const publication = await db
       .collection(COLLECTION_NAME)
       .findOne({ slug, status: "PUBLISHED" }); // Lookup by slug and PUBLISHED status
@@ -41,8 +38,11 @@ export async function GET(
     return NextResponse.json(publication);
   } catch (error) {
     // CRITICAL IMPROVEMENT: Consistent and enabled error logging
-    console.error(`[API/${COLLECTION_NAME} Single Fetch] Failed to fetch data for slug:`, error);
-    
+    console.error(
+      `[API/${COLLECTION_NAME} Single Fetch] Failed to fetch data for slug:`,
+      error,
+    );
+
     return NextResponse.json(
       { error: "Failed to fetch publication due to a server error." },
       { status: 500 },
